@@ -1,0 +1,49 @@
+category: Artificial Intelligence
+description: Effect.AI is a decentralized platform for Artificial Intelligence. 
+
+Token Sale: since 15 Mar	
+Ticker: AIX	
+Token type: NEO Blockchain	
+Fundraising Goal: 18,100,000 USD (14,820,000 EURO)	
+Total Tokens: 650,000,000	
+Available for Token Sale: 40%	
+Bonus for the First: 10% For the first 5,200,000 tokens (2% of ico)	
+Min/Max Personal Cap: € 50 / € 25,000	Accepts: ETH, NEO	
+
+Additional links:
+- website: https://www.effect.ai/?utm_source=icodrops41
+- whitepaper: https://effect.ai/download/effect_whitepaper.pdf
+("one pager", "https://effect.ai/download/effect_lightpaper.pdf"),
+("bounty", "https://bitcointalk.org/index.php?topic=2785617")
+
+social links:
+
+facebook: https://www.facebook.com/effectai/
+("reddit", "https://www.reddit.com/r/effectai/","social",3)
+("github", "https://github.com/effectai","social",3)
+("twitter","https://twitter.com/effectaix","social",3)
+("telegram","https://t.me/effectai","social",3)
+("Medium", "https://medium.com/@effectai","social",3)
+("bitcointalk.org","https://bitcointalk.org/","social",3)index.php?topic=2737469.0
+
+
+
+Promo video: 
+
+insert into main_adlink(link_name,link_value,link_type,ico_id)
+values ("one pager", "https://effect.ai/download/effect_lightpaper.pdf","not social",3),
+("bounty", "https://bitcointalk.org/index.php?topic=2785617","not social",3)
+
+
+insert into main_adlink(link_name,link_value,link_type,ico_id)
+values ("reddit", "https://www.reddit.com/r/effectai/","social",3),
+("github", "https://github.com/effectai","social",3),
+("twitter","https://twitter.com/effectaix","social",3),
+("telegram","https://t.me/effectai","social",3),
+("Medium", "https://medium.com/@effectai","social",3),
+("bitcointalk.org","https://bitcointalk.org/","social",3)
+
+insert into main_screen_shot(pic_url,ico_id) values ("Effect.ai\\screenshots\\Effect.ai-Stages.jpg",3),
+("Effect.ai\\screenshots\\Effect.ai-Team.jpg",3),
+("Effect.ai\\screenshots\\Effect.ai-Token-distribution.jpg",3),
+("Effect.ai\\screenshots\\Effect.ai-Token-sale-details.jpg",3);

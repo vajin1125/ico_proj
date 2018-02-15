@@ -1,0 +1,45 @@
+category: media
+description: An Incentivized, Blockchain-Enabled Multimedia Ecosystem. Get paid to stream from major media networks, all-in-one. 
+
+
+
+
+
+ Token Sale: 14 Mar – 4 Apr	
+Ticker: CRNC	Token type: ERC20
+ICO Token Price: 1 CRNC = 0.24 USD	
+Fundraising Goal: 36,000,000 USD	
+Total Tokens: 1,000,000,000	
+Available for Token Sale: 35%	
+Min/Max Personal Cap: 0.03 ETH / TBA	
+Accepts: ETH, BTC, NEO	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Additional links:
+- website: https://tokensale.current.us/?utm_source=icodrops
+- whitepaper: https://cdn.current.us/deck.pdf
+- one pager: https://cdn.current.us/onepager.pdf
+
+
+social links:
+
+- reddit: https://www.reddit.com/r/CurrentCRNC/
+- github: https://github.com/CurrentMediaNetwork
+- twitter: https://twitter.com/Current_CRNC
+- telegram: https://t.me/joinchat/F-KV7A8VpJrZw-QBRjumRg
+- Medium: https://medium.com/current-crnc
+- facebook: https://www.facebook.com/CurrentCRNC/
+
+Promo video: https://www.youtube.com/watch?v=dV_ydsmnh7Y

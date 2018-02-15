@@ -1,0 +1,36 @@
+
+category: Social Network
+description: A customizable and privacy-focused, decentralized social news platform.
+
+
+Token Sale: 3 Mar – 3 Apr	
+Ticker: SPN	
+Token type: ERC20	
+ICO Token Price: 1 SPN = 0.11 USD	
+Fundraising Goal: 30,000,000 USD	
+Sold on pre-sale: 13,240,000 USD (20% bonus)	
+Total Tokens: 500,000,000	
+Available for Token Sale: 45%
+Know Your Customer (KYC): Yes	
+Bonus for the First: Up to 45% (Image)	
+Token Issue: End of the token sale	
+Accepts: ETH, BTC
+
+Additional links:
+- website: https://www.sapien.network/?utm_source=icodrops
+- whitepaper: https://www.sapien.network/assets/SPNv1_1.pdf
+- one pager (https://www.sapien.network/assets/sapien_one_pager.pdf)	
+
+social links:
+
+- reddit: https://www.reddit.com/r/sapien/
+- github: https://github.com/SapienNetwork
+- twitter: https://twitter.com/sapien_network
+- telegram: https://t.me/SapienNetwork
+- Medium: https://blog.sapien.network/
+- bitcointalk.org: https://bitcointalk.org/index.php?topic=2739033.0
+-facebook: https://www.facebook.com/sapien.network/
+
+
+Promo video: https://www.youtube.com/watch?v=LMXq-_bAs5g
+

@@ -1,0 +1,33 @@
+category: exchange
+description: DEX on NEO blockchain. NEX is a platform for complex decentralized cryptographic trade and payment service creation.
+
+ Token Sale: since 25 Mar	
+Ticker: NEX	
+Token type: NEO Blockchain	
+ICO Token Price: 1 NEX = 1.00 USD	
+Fundraising Goal: 25,000,000 USD	
+Sold on pre-sale: No presale	
+Total Tokens: 50,000,000	
+Available for Token Sale: 50%	
+Whitelist: No	
+Accepts: NEO, GAS	
+
+Additional links:
+- website: https://neonexchange.org/?utm_source=icodrops
+- whitepaper: https://neonexchange.org/pdfs/whitepaper_v1.1.pdf
+- one pager:
+
+social links:
+
+- facebook: 
+- reddit: https://www.reddit.com/r/NEO/
+- github: https://github.com/neonexchange
+- twitter: https://twitter.com/neonexchange
+- telegram: 
+- Medium: https://medium.com/neon-exchange
+- bitcointalk.org: 
+
+
+
+Promo video: 
+

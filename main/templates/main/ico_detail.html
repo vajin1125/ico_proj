@@ -1,0 +1,319 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+	<div id="top-breadcrumb">
+		<ol class="breadcrumb" style="background-color:#fff;">
+			<li class="breadcrumb-item"><a href="{% url 'main:home'%}">ICO detective</a></li>
+			{% if ico.status == "active" %}
+			<li class="breadcrumb-item"><a href="{% url 'main:category' 'active' %}">Active ICO</a></li>
+			{% elif ico.status == "upcoming" %}
+			<li class="breadcrumb-item"><a href="{% url 'main:category' 'upcoming' %}">Upcoming ICO</a></li>
+			{% else %}
+			<li class="breadcrumb-item"><a href="{% url 'main:category' 'ended' %}">Ended ICO</a></li>
+			{% endif %}
+			<li class="breadcrumb-item active">{{ ico.name }}</li>
+		</ol>
+	</div>
+	<!-- project description -->
+	<div id="main-desc">
+		<div class="row">
+			<div class="col-1">
+				<img class="rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO" style="width:60px;height:60px;">
+			</div>
+			<div class="col">
+				<span id="ico-name">{{ ico.name }}</span>
+				<span>({{ ico.category }})</span>
+			</div>
+		</div>
+		<div class="row" id="ico-description">
+			<span>{{ ico.proj_desc }}</span>
+		</div>
+
+		<div class="row content1">
+			<!-- video -->
+			<div class="col-8" id="ico-video">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="{{ ico.movie_url }}" allowfullscreen></iframe>
+				</div>
+			</div>
+			<!-- goal -->
+			<div class="col-4">
+				<div id="goal-1">
+					{% if ico.status == "active" %}
+
+					<span>Token Sale ends in {{ ico.date_info }} DAYS</span>
+
+					{% elif ico.status == "upcoming" %}
+
+					<span>Token Sale ends Starts {{ ico.date_info }}</span>
+
+					{% else %}
+
+					<span>Token Sale ends Ended {{ ico.date_info }}</span>
+
+					{% endif %}
+					
+				</div>
+				<div>
+					<div id="goal-2">
+						<span>$2,076,400</span>
+					</div>
+					<div id="goal-3">
+						<span>of </span><span>$16,000,000</span><span> (13%)</span>
+					</div> 
+					<div id="goal-4">
+						<span>GOAL</span>
+					</div>
+				</div>
+				<div>
+					<div class="goal-btn"><a href="{{ ico.site_url }}" class="btn btn-info" target="_blank" role="button" style="width:40%;height:40px;border-radius:0px;border:1px;">WEBSITE</a></div>
+					<div class="goal-btn"><a href="{{ ico.whitepaper_url }}" class="btn btn-info" target="_blank" role="button" style="width:40%;height:40px;border-radius:0px;border:1px;">WHITEPAPER</a></div>
+				</div>
+				<div style="margin-top:10px;color:grey;">Social Links</div>
+				<div class="soc-goal">
+					{% for link in ico.social_links %}
+						
+						{% if link.link_name == "facebook" %}
+							<a href="{{ link.link_value }}"><i class="fab fa-facebook-square"></i></a>
+						{% endif %}
+
+						{% if link.link_name == "twitter" %}
+							<a href="{{ link.link_value }}"><i class="fab fa-twitter"></i></a>
+						{% endif %}
+
+						{% if link.link_name == "instagram" %}
+							<a href="{{ link.link_value }}"><i class="fab fa-instagram"></i></a>
+						{% endif %}
+
+						{% if link.link_name == "telegram" %}
+							<a href="{{ link.link_value }}"><i class="fab fa-telegram"></i></a>
+						{% endif %}
+
+						{% if link.link_name == "reddit" %}
+							<a href="{{ link.link_value }}"><i class="fab fa-reddit-alien"></i></a>
+						{% endif %}
+
+						{% if link.link_name == "github" %}
+							<a href="{{ link.link_value }}"><i class="fab fa-github"></i></a>
+						{% endif %}
+
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<div class="row content2">
+			<div class="col-7">
+				<div class="token-desc">
+					<span><i class="fas fa-calendar-alt"></i></span>
+					<span>TOKEN SALE : </span><span>{{ ico.token_sale_open }}</span><span>-</span><span>{{ ico.token_sale_close }}</span>
+				</div>
+				<div>
+					<div class="token-detail">
+						<ul>
+							<!-- <li><span class="token-detail-category">Sale : </span><span class="token-detail-data"> since 1 Mar</span></li> -->
+							<li><span class="token-detail-category">Ticker : </span><span class="token-detail-data">{{ ico.ticker }}</span></li>
+							<li><span class="token-detail-category">Token type : </span><span class="token-detail-data">{{ ico.token_type }}</span></li>
+							<li><span class="token-detail-category">ICO Token Price : </span><span class="token-detail-data">{{ ico.token_price }}</span></li>
+							<li><span class="token-detail-category">Fundraising Goal : </span><span class="token-detail-data">{{ ico.fundraising_goal }}</span></li>
+							<li><span class="token-detail-category">Sold on pre-sale : </span><span class="token-detail-data"> Bonus up to 233%</span></li>
+							<li><span class="token-detail-category">Total Tokens : </span><span class="token-detail-data">{{ ico.total_tokens }}</span></li>
+							<li><span class="token-detail-category">Available for Token Sale : </span><span class="token-detail-data"> 40%</span></li>
+							<li><span class="token-detail-category">Know Your Customer (KYC) : </span><span class="token-detail-data"> Yes</span></li>
+							<li><span class="token-detail-category">Token Issue : </span><span class="token-detail-data"> 30 days after the close of the public sale and audit</span></li>
+							<li><span class="token-detail-category">Accepts : </span><span class="token-detail-data">{{ ico.accepts }}</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-5">
+				<div class="token-desc">
+					<span><i class="fas fa-link"></i></span><span>ADDTIONAL LINKS</span>
+				</div>
+				<div class="token-detail">
+					<ul>
+						<li><span class="token-detail-category">Website URL</span></li>
+						<li><span class="token-detail-category">Whitepaper URL</span></li>
+						<li><span class="token-detail-category">Number of Team Members : </span><span> 20</span></li>
+						<li><span class="token-detail-category">Team from : </span><span> GERMANY</span></li>
+						<li><span class="token-detail-category">Unsold Tokens : </span><span> WILL BE BURED</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 token-desc">
+				<span><i class="far fa-image"></i></span> <span>SCREENSHOTS</span>
+			</div>
+			<div class="row sh-gallery">
+				{% for sh in ico.ScreenShots %}
+				<div class="col-sm-6 col-md-3">
+					
+					<a class="lightbox" href="{% static sh.pic_url %}">
+						<div class="ico-screenshot">
+							<img class="img-fluid" src="{% static sh.pic_url %}">
+						</div>
+					</a>
+					<div class="caption">
+						<span>{{ sh.file_name }}</span>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<script>
+				baguetteBox.run('.sh-gallery');
+		</script>
+	</div><!-- project description end -->
+
+	<!-- share ico -->
+	<div class="ico-share">
+		<div class="col-12">
+			<span style="color:gray">Share ICO in</span>
+		</div>
+		<div class="col-12 share-social-icon">
+			<a href="#"><div class="share-icon" id="fb"></div></a>
+			<a href="#"><div class="share-icon" id="go"></div></a>
+			<a href="#"><div class="share-icon" id="twt"></div></a>
+			<a href="#"><div class="share-icon" id="rdd"></div></a>
+			<a href="#"><div class="share-icon" id="ln"></div></a>
+			<a href="#"><div class="share-icon" id="wha"></div></a>
+			<a href="#"><div class="share-icon" id="tel"></div></a>
+		</div>
+	</div><!-- share ico end -->
+
+	<!-- other ICO -->
+	<div class="col-12" style="margin-top:60px; padding:0;">
+		<div class="other-ico">
+			{% if ico.status == "active" %}
+				<a href="{% url 'main:category' 'active' %}">
+					<span>OTHERS IN <i class="fas fa-angle-double-left"></i>ACTIVE ICO<i class="fas fa-angle-double-right"></i></span>
+				</a>
+				{% elif ico.status == "upcoming" %}
+				<a href="{% url 'main:category' 'upcoming' %}">
+					<span>OTHERS IN <i class="fas fa-angle-double-left"></i>UPCOMING ICO<i class="fas fa-angle-double-right"></i></span>	
+				</a>
+				{% else %}
+				<a href="{% url 'main:category' 'ended' %}">
+					<span>OTHERS IN <i class="fas fa-angle-double-left"></i>ENDED ICO<i class="fas fa-angle-double-right"></i></span>
+				</a>	
+			{% endif %}
+		</div>
+	</div><!-- other ICO end -->
+
+	<div class="row col-12" style="padding:20px;margin-top:40px;">
+		<!-- ico card -->
+		{%for ico in other_icos%}
+		<div class="col-md-6 ico-card card-shadow main-card">
+			<a href="{% url 'main:detail' ico.id %}">
+				<div class="row ico-row">
+					<div class="ico-icon">
+						<img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO">
+					</div>
+					<div class="ico-main-info">
+						<h5>{{ ico.name }}</h5>
+						<div class="ico-category-name"><span>{{ ico.category }}</span></div>
+						<div class="goal-in-card">
+							<span>$35,200,000</span>
+							<span>/$75,000,000</span>
+							<span>%47</span>
+						</div>
+						<div class="interest" style="display:inline-block">Not Rated</div>
+						<div class="date" style="display:inline-block">{{ ico.date_info }} left</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+
+	<!-- <div class="row">
+		<div class="discus" style="width:100%; height:500px;">
+
+		</div>
+	</div> -->
+</div>
+
+{% endblock content %}
+
+<!-- {%load static%}	
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ico.name}}</title>
+</head>
+<body>
+	{%if ico.status == "active" %}
+		<h3>Active</h3>
+	{%elif ico.status == "upcoming" %}
+		<h3>UPCOIMING</h3>
+	{%else%}
+		<h3>ENDED</h3>
+	{%endif%}
+	<div>
+		<p>Logo</p>
+		<img src= "{% static ico.logo_pic %}" alt="SyncFab How it works">
+		<h4>	{{ico.name}}	</h4>
+		<h4>	{{ico.category}}	</h4>
+		<h4>	{{ico.proj_desc}}	</h4>
+		<h4>	{{ico.movie_url}}	</h4>
+		{%if ico.status == active%}
+			<h4>	TokenSale ends in {{ico.date_info}}days</h4>
+		{%elif ico.status == upcoming%}
+			<h4>upcoming</h4>
+		{%else%}
+			<h4>ENDED</h4>
+		{%endif%}		
+		<h4>Undefined Fundraising Goal</h4>
+		<h4>ico.site_url</h4>
+		<h4>ico.whitepaper_url</h4>
+		{%for link in ico.social_links%}
+		<h4>{{link.link_name}}:{{link.link_value}}</h4>
+		{%endfor%}
+	</div>
+	<div>
+		<h2>TOKEN SALE:{{ico.token_sale_open}} - {{ico.token_sale_close}}</h2>
+		<h4>Ticker:{{ico.ticker}}</h4>
+		<h4>Tokey Type:{{ico.token_type}}</h4>
+		<h4>ICO Token Price:{{ico.token_price}}</h4>
+		<h4>Fundraising Goal:{{ico.fundraising_goal}}</h4>
+		<h4>Total Tokens{{ico.total_tokens}}</h4>
+		{%for atsd in ico.AdditionalTokenSaleDetails%}
+			<h4>{{atsd.atsd_name}}:{{atsd.atsd_value}}</h4>		
+		{%endfor%}
+		<h4>ACCEPTS:{{ico.accepts}}</h4>	
+	</div>
+	<div>
+		<h2>Additional Links</h2>
+		<h4>{{ico.site_url}}</h4>
+		<h4>{{ico.whitepaper_url}}</h4>
+		{%for review in ico.Reviews%}
+		<h4>{{review.review_option}} : {{review.review_option_value}}</h4>
+		{%endfor%}
+	</div>
+	<div>
+		<h2>SCREEN SHOTS</h2>
+		{%for sh in ico.ScreenShots%}
+		<img src= "{% static sh.pic_url %}" alt="SyncFab How it works">
+		{%endfor%}
+	</div>
+	<div>
+		{{other_icos|length}}
+		<h2>OTHERS IN &lt;{{ico.status|capfirst}}&gt; </h2>
+		{%for ico in other_icos%}
+		<div>
+			<p>Logo</p>
+			<img src= "{% static ico.logo_pic %}" alt="SyncFab How it works">
+			<h4>	{{ico.name}}	</h4>
+			<h4>	{{ico.category}}	</h4>
+			<h4>	undefined ? have to ask	</h4>
+			<h4>	{{ ico.date_info}}</h4>
+			
+		</div>
+		{% endfor %}
+	</div>
+</body>
+</html> -->
+
+

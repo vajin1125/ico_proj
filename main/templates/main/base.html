@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ICO Details of Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+</head>
+<body>
+    <div>
+        <header> 
+            <!-- abs banner -->
+            <div class="text-center" style="background-color: #650aa1; box-shadow: none; padding-top:5px;padding-bottom:5px;">
+                <div style="display:inline-block">
+                    <a href="https://copytrack.io/?utm_source=icodrops&amp;utm_medium=banner&amp;utm_campaign=topbanner" target="_blank">
+                        <img class="ad-logo" src="https://cdn.icodrops.com/wp-content/uploads/2017/08/cpy.png" alt="the-top" style="height: 30px;">
+                    </a>
+                </div>
+                <div class="the-top-banner-text"  style="display:inline-block">
+                    <span style="color:rgb(0, 0, 0);margin-right: 6px;margin-left:10px;">COPYTRACK</span>
+                    <span class="ad-description" style="color:rgb(0, 0, 0);">–  JOIN THE COPYRIGHT REVOLUTION | $10M+ ALREADY RAISED</span>
+                    <span>
+                        <a class="bannerbtn" href="https://copytrack.io/?utm_source=icodrops&amp;utm_medium=banner&amp;utm_campaign=topbanner" onmouseover="this.style.backgroundColor='#d9ad00'" onmouseout="this.style.backgroundColor='#fc0'" target="_blank" rel="nofollow" style="vertical-align: 2px; color: rgb(0, 0, 0); background-color: rgb(255, 204, 0);">SECURE BONUS NOW</a>
+                    </span>
+                </div>
+            </div>
+            <!-- abs banner end -->
+
+            <div class="container">
+                <div class="row" id="top-menubar">
+                    <div class="col-2">
+                        <a href="{% url 'main:home' %}" id="main-logo">
+                            <img id="logo" src="https://icodrops.com/wp-content/uploads/2017/09/LogoDrops.png" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="col-3 main-search">
+                        <form class="form-inline" method="get" action="{% url 'main:search' %}">
+                            <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <button class="btn btn-sm"  id="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
+                                <input id="mysearch" class="form-control" type="text" name="search_ico" placeholder="Search ICO" aria-label="Search" style="padding-left: 20px; border-radius: 40px;">
+                                
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-7">
+                        <ul class="main-menu">
+                            <li class="menu-item">
+                                <a class="" href="{% url 'main:category' 'active' %}"><strong>ACTIVE ICO</strong></a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="" href="{% url 'main:category' 'upcoming' %}"><strong>UPCOMING ICO</strong></a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="" href="{% url 'main:category' 'ended' %}"><strong>ENDED ICO</strong></a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="" href="{% url 'main:category' 'stats' %}"><strong>ICO STATS</strong></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header><!-- header end -->
+
+        <div class="container">
+            <div class="main-page">
+                <div class="row">
+                    {% load custom_tags %}
+                    {% btc_eth %}
+                    <div class="col-8">
+                        <ul class="top-social-link">
+                            <li class="soc-link"><a href="twitter"><i class="fab fa-twitter"></i><span>Twitter</span><span>(33K)</span></a></li>
+                            <li class="soc-link"><a href="telegram"><i class="fab fa-telegram"></i><span>Telegram</span><span>(33K)</span></a></li>
+                            <li class="soc-link"><a href="instagram"><i class="fab fa-instagram"></i><span>Instergram</span><span>(33K)</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {% block content %}
+            {% endblock content %}  
+            
+            <!-- discus -->
+
+            <!-- footer -->
+            <div class="container">
+                <div class="row" style="height:200px;box-sizing:border-box;border-top: 1px solid rgb(223, 223, 223);margin-top:20px;padding-top:20px;">
+                    <div class="col-lg-4 col-md-4" style="padding:0;">
+                        <img src="https://icodrops.com/wp-content/uploads/2017/09/LogoDrops.png" alt="LOGO" style="width:130px;">
+                        <div>
+                            Made with  for the Decentralized World.
+                            ICO Drops is an independent ICO (Token Sale) database and is not affiliated with any ICO project or company. Our "Interest Level" isn't a financial or investment advice.
+                            © 2018 ICO Drops.
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div>
+                            <ul style="list-style:none;">
+                                <li>Active ICO</li>
+                                <li>Upcoming ICO</li>
+                                <li>Ended ICO</li>
+                                <li>ICO State</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div>
+                            <ul style="list-style:none;">
+                                <li>Email</li>
+                                <li>Twitter</li>
+                                <li>Telegram</li>
+                                <li>Instagram</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- page end -->
+</body>
+</html>

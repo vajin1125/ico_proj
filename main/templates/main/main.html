@@ -1,0 +1,148 @@
+{% extends "main/base.html" %}
+{%load static%}
+{%block content%}
+	<div class="row" style="display:flex">
+		<div class="col-12 col-lg-4">
+			<div class="category-table-header">
+				<h4>
+					<a href="{%url 'main:category' 'active'%}">ACTIVE ICO</a>
+				</h4>
+			</div>
+			<div class="category1">
+				{% for ico in active_icos %}
+
+					<a id="n-color" href="{%url 'main:detail' ico.id%}">
+						<div class="ico-card main-card">
+							<div class="ico-card-row">
+								<div class="ico-card-icon" style="display:inline-block;">
+									<img class="rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO" width="60" height="60">
+								</div>
+								<div class="ico-card-main-info" style="display:inline-block;">
+									<h5>
+										{{ico.name}}
+									</h5>
+									<div class="ico-category-name">
+										{{ico.category}}
+									</div>
+									<div class="goal-in-card">
+										<span class="curency">$2,000,000</span>
+										<span>/5,000,000</span>
+										<span>40%</span>
+									</div>
+								</div>
+							</div>
+							<div class="interest" style="display:inline-block;">
+								<span>sponsored</span>
+							</div>
+							<div class="date" style="float:right;">
+								<span>{{ ico.date_info}}d left</span>
+							</div>
+						</div>
+					</a>
+				{% endfor %}
+				<a href="{% url 'main:category' 'active' %}">
+					<div class="ico-viewall">
+						<span>VIEW ALL </span>
+						<span> {{active_icos|length}}</span>
+						<span>ACTIVE ICO</span>
+						<span><i class="fas fa-arrow-right"></i></span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-12 col-lg-4">
+			<div class="category-table-header">
+				<h4>
+					<a href="{% url 'main:category' 'upcoming' %}">UPCOMING ICO</a>
+				</h4>
+			</div>
+			<div class="category1">
+				{% for ico in upcoming_icos %}
+					<a id="n-color" href="{%url 'main:detail' ico.id%}">
+						<div class="ico-card main-card">
+							<div class="ico-card-row">
+								<div class="ico-card-icon" style="display:inline-block;">
+									<img class="rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO" width="60" height="60">
+								</div>
+								<div class="ico-card-main-info" style="display:inline-block;">
+									<h5>
+										{{ico.name}}
+									</h5>
+									<div class="ico-category-name">
+										{{ico.category}}
+									</div>
+									<div class="goal-in-card">
+										<span class="curency">$2,000,000</span>
+										<span>/5,000,000</span>
+										<span>40%</span>
+									</div>
+								</div>
+							</div>
+							<div class="interest" style="display:inline-block;">
+								<span>sponsored</span>
+							</div>
+							<div class="date" style="float:right">
+								<span>{{ ico.date_info}} left</span>
+							</div>
+						</div>
+					</a>
+				{% endfor %}
+				<a href="{% url 'main:category' 'upcoming' %}">
+					<div class="ico-viewall">
+						<span>VIEW ALL </span>
+						<span> {{upcoming_icos|length}}</span>
+						<span>UPCOMING ICO</span>
+						<span><i class="fas fa-arrow-right"></i></span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-12 col-lg-4">
+		<div class="category-table-header">
+				<h4>
+					<a href="{% url 'main:category' 'ended' %}">ENDED ICO</a>
+				</h4>
+			</div>
+			<div class="category1">
+				{% for ico in ended_icos %}
+					<a id="n-color" href="{%url 'main:detail' ico.id%}">
+						<div class="ico-card main-card">
+							<div class="ico-card-row">
+								<div class="ico-card-icon" style="display:inline-block;">
+									<img class="rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO" width="60" height="60">
+								</div>
+								<div class="ico-card-main-info" style="display:inline-block;">
+									<h5>
+										{{ico.name}}
+									</h5>
+									<div class="ico-category-name">
+										{{ico.category}}
+									</div>
+									<div class="goal-in-card">
+										<span class="curency">$2,000,000</span>
+										<span>/5,000,000</span>
+										<span>40%</span>
+									</div>
+								</div>
+							</div>
+							<div class="interest" style="display:inline-block;">
+								<span>sponsored</span>
+							</div>
+							<div class="date" style="float:right">
+								<span>{{ ico.date_info}} Ended</span>
+							</div>
+						</div>
+					</a>
+				{% endfor %}
+				<a href="{% url 'main:category' 'ended' %}">
+					<div class="ico-viewall">
+						<span>VIEW ALL </span>
+						<span> {{ended_icos|length}}</span>
+						<span>ENDED ICO</span>
+						<span><i class="fas fa-arrow-right"></i></span>
+					</div>
+				</a>				
+			</div>
+		</div>
+	</div>
+{%endblock content%}

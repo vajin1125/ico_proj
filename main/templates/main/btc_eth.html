@@ -1,0 +1,40 @@
+{%if bitcoin_info.change >= 0%}
+	<script>
+		$(document).ready(function(){
+			$("#btc-change").prepend("<span> +</span>");
+			$("#btc-change").addClass("green-font");
+		});
+	</script>
+{%else%}
+	<script>
+		$(document).ready(function(){
+			// $("#btc-change").prepend("<span> -</span>");
+			$("#btc-change").addClass("red-font");
+		});
+	</script>
+{%endif%}
+
+{%if eth_info.change >= 0%}
+	<script>
+		$(document).ready(function(){
+			$("#bth-change").prepend("<span> +</span>");
+			$("#bth-change").addClass("green-font");
+		});
+	</script>
+{%else%}
+	<script>
+		$(document).ready(function(){
+			// $("#bth-change").prepend("<span> -</span>");
+			$("#bth-change").addClass("red-font");
+		});
+	</script>
+{%endif%}
+
+<div class="col-2" id="btc">	
+	<span>BTC ${{bitcoin_info.price}}</span>
+	<span id="btc-change">{{bitcoin_info.change}}%</span>
+</div>
+<div class="col-2" id="bth">
+	<span>BTH ${{eth_info.price}}</span>
+	<span id="bth-change">{{eth_info.change}}%</span>
+</div>

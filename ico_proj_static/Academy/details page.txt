@@ -1,0 +1,36 @@
+category: Blockchain Service
+description: First accredited school of blockchain development. 
+
+ Token Sale: since 1 Mar	
+Ticker: ACAD	
+Token type: ERC20	
+ICO Token Price: 1 ACAD = 2.00 USD	
+Fundraising Goal: 50,000,000 USD	
+Sold on pre-sale: Bonus up to 233%	
+Total Tokens: 195,000,000	
+Available for Token Sale: 40%
+Know Your Customer (KYC): Yes	
+Token Issue: 30 days after the close of the public sale and audit	
+Accepts: ETH, BTC, LTC, BCH
+
+		
+
+Additional links:
+- website: https://www.academytoken.com/?utm_source=icodrops
+- whitepaper: https://issuu.com/academyschool/docs/academy-token-whitepaper-v5-1212220
+- one pager:
+
+social links:
+
+- facebook: https://www.facebook.com/academytoken
+- reddit: 
+- github: 
+- twitter: https://twitter.com/AcademyToken
+- telegram: https://t.me/joinchat/FfW5ug01BVwlsGuur3K3lA
+- Medium: 
+- bitcointalk.org: 
+
+
+
+Promo video: https://vimeo.com/243476960
+

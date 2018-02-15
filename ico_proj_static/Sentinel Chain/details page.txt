@@ -1,0 +1,34 @@
+category: Marketplace
+description: The Sentinel Chain is a B2B marketplace specifically designed to provide affordable and secure financial services to the unbanked. 
+
+Token Sale: since 15 Mar	
+Ticker: SENC	
+Token type: ERC20	
+Fundraising Goal: 14,400,000 USD	
+Sold on pre-sale: 6,400,000 USD (25% bonus, lock-up for 3 months)	
+Total Tokens: 500,000,000	
+Available for Token Sale: 40%
+Whitelist: Yes (5 Feb – 26 Feb, JOIN )	
+?an't participate: USA, China	
+Token Issue: 3 days before they are listed on exchanges	
+Accepts: ETH		
+
+Additional links:
+- website: https://sentinel-chain.org/?utm_source=icodrops
+- whitepaper: https://sentinel-chain.org/Sentinel.Chain.Whitepaper.v0_31.1.pdf
+- one pager:
+
+social links:
+
+- facebook: 
+- reddit: 
+- github: 
+- twitter: https://twitter.com/sentinelchain
+- telegram: https://t.me/sentinelchain
+- Medium: https://medium.com/sentinelchain
+- bitcointalk.org: 
+
+
+
+Promo video: https://www.youtube.com/watch?v=uGWUtP_cl-4
+

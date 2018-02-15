@@ -1,0 +1,32 @@
+category: blockchain service
+description: An efficient blockchain infrastructure for decentralized applications, token issuance and integration.
+
+ Token Sale: since 1 Mar	
+Ticker: TMC	
+Token type: ERC20	
+Fundraising Goal: 8,500,000 USD	
+Total Tokens: 100,000,000	
+Available for Token Sale: 50%	
+Whitelist: TBA	
+Know Your Customer (KYC): Yes	
+Accepts: ETH	
+
+Additional links:
+- website: https://tomocoin.io/?utm_source=icodrops
+- whitepaper: https://drive.google.com/file/d/1xrtNX9y_ayyx7UKWYzIWOqley3jUUIWH/view
+- demo:Ç https://tomoapp.com/
+
+social links:
+
+- facebook: https://www.facebook.com/tomocoin
+- reddit: 
+- github: 
+- twitter: https://twitter.com/TomoCoin_io
+- telegram: https://t.me/tomocoin
+- Medium: https://medium.com/tomocoin
+- bitcointalk.org: https://bitcointalk.org/index.php?topic=2021785.0
+
+
+
+Promo video: https://www.youtube.com/watch?v=okTcuq9VsAA
+

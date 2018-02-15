@@ -1,0 +1,42 @@
+category: Verification
+description: Kairos is an artificial intelligence company specializing in face recognition. Through computer vision and machine learning, Kairos can recognize faces in videos, photos, and the real-world - making it easier than ever to transform the way your business interacts with people. 
+
+Token Sale: since 15 Apr	
+Ticker: Kairos	Token type: Own wallet	
+ICO Token Price: 1 Kairos = 0.20 USD	
+Fundraising Goal: 30,000,000 USD	
+Sold on pre-sale: 10,000,000 USD (Up to 50% Bonus)	
+Total Tokens: 450,000,000	
+Available for Token Sale: 40.4%	
+Whitelist: Yes (period isn't set, JOIN )	
+Know Your Customer (KYC): Yes	
+Bonus for the First: Up to 50% (Image)	
+Min/Max Personal Cap: 1 ETH / TBA	
+Token Issue: April 2018	Accepts: ETH, USD	
+
+insert into main_atsd(atsd_name,atsd_value,ico_id) values
+("Available for Token Sale", "40.4%",3),
+("Whitelist","Yes (until 15 Jan, JOIN )",3),
+("Know Your Customer (KYC)", "Yes",3);
+
+Additional links:
+- website: https://www.kairos.com/token-sale?utm_source=icodrops
+- whitepaper: https://docs.google.com/document/d/1BQF3U9wSe61HFya2-L4Id4BGVrJNcCvo5f_A1cqhIbw/edit
+- documentation: https://www.kairos.com/token-sale#docs
+- demo: https://www.kairos.com/demos
+- one pager:
+
+social links:
+
+- facebook: https://www.facebook.com/kairossoftware
+- reddit: 
+- github: https://github.com/kairosinc
+- twitter: https://twitter.com/LoveKairos
+- telegram: https://t.me/KairosICO
+- Medium: https://www.kairos.com/blog/
+- bitcointalk.org: 
+
+
+
+Promo video: https://www.youtube.com/watch?v=vAAEpeLKyuQ
+

@@ -1,0 +1,42 @@
+category: Smart Contract
+description: Transparent contracts. Drastically reduced overhead costs. And instant payments. Facilitated by Grain’s blockchain 
+solution. Grain is an infrastructure solution that allows companies to process work agreements on the blockchain, with an instant payment mechanism. 
+
+ Ticker: GRAIN	
+Token type: ERC20	
+ICO Token Price: 1 GRAIN = 0.0340 USD (0.02778 EURO)	
+Fundraising Goal: 36,700,000 USD (30,000,000 EURO)	
+Total Tokens: 3,600,000,000	
+Available for Token Sale: 30%
+Whitelist: Yes (period isn't set, JOIN )	
+Know Your Customer (KYC): Yes	
+("can't participate", "USA, China")	
+("Min/Max Personal Cap","0.1 ETH / TBA")
+("Token Issue","Mar 29")	
+Accepts: ETH	
+
+insert into main_atsd(atsd_name,atsd_value,ico_id) values
+("Available for Token Sale", "30%",5),
+("Whitelist","Yes (period isn't set, JOIN )",5),
+("Know Your Customer (KYC)", "Yes",5)
+
+Additional links:
+- website: https://grain.io/?utm_source=icodrops
+- whitepaper: https://grain.io/grain-v101.pdf
+- one pager: https://grain.io/grain-onepager-v101.pdf
+- bounty: https://bitcointalk.org/index.php?topic=2779618
+
+social links:
+
+- facebook: https://www.facebook.com/grain.io/
+- reddit: 
+- github: 
+- twitter: https://twitter.com/Grain_io
+- telegram: https://t.me/joinchat/IAWYn0jj2m02434fbd73Tg
+- Medium: 
+- bitcointalk.org: https://bitcointalk.org/index.php?topic=2766557.0
+
+
+
+Promo video: https://www.youtube.com/watch?v=Vm4vYO56-ZY
+

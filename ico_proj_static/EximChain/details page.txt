@@ -1,0 +1,42 @@
+category: Blockchain Service
+description: Software development company focused on supply chain applications. 
+From supplier credit to inventory management, Eximchain helps businesses connect, transact, and share information more efficiently 
+and securely. 
+
+Token Sale: since 15 Mar	
+Ticker: EXC	
+Token type: ERC20	
+ICO Token Price: 1 EXC = 0.33 USD	
+Fundraising Goal: 20,000,000 USD	
+Total Tokens: 150,000,000	
+("Available for Token Sale", "40%",3),
+("Whitelist","Yes (until 15 Jan, JOIN )",3),
+("Know Your Customer (KYC)", "Yes",3)	
+Accepts: ETH	
+
+insert into main_atsd(atsd_name,atsd_value,ico_id) values
+("Available for Token Sale", "40%",3),
+("Whitelist","Yes (until 15 Jan, JOIN )",3),
+("Know Your Customer (KYC)", "Yes",3);
+
+
+Additional links:
+- website: https://www.eximchain.com/?utm_source=icodrops
+- whitepaper: https://www.eximchain.com/EXIMCHAIN-Whitepaper.pdf
+- faq: https://www.eximchain.com/faq.html
+- one pager:
+
+social links:
+
+- facebook: https://www.facebook.com/eximchain/
+- reddit: 
+- github: https://github.com/eximchain
+- twitter: https://twitter.com/EximchainEXC
+- telegram: https://t.me/eximchain
+- Medium: https://medium.com/eximchain
+- bitcointalk.org: 
+
+
+
+Promo video: 
+

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ICO Details of Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -20,17 +20,18 @@
     <div>
         <header> 
             <!-- abs banner -->
-            <div class="text-center" style="background-color: #650aa1; box-shadow: none; padding-top:5px;padding-bottom:5px;">
+            <div class="text-center" style="background-color: #9fe6a6; box-shadow: none; padding-top:5px;padding-bottom:5px;">
                 <div style="display:inline-block">
                     <a href="https://copytrack.io/?utm_source=icodrops&amp;utm_medium=banner&amp;utm_campaign=topbanner" target="_blank">
-                        <img class="ad-logo" src="https://cdn.icodrops.com/wp-content/uploads/2017/08/cpy.png" alt="the-top" style="height: 30px;">
+                        <img class="ad-logo" src="{% static 'bitcoin.png' %}" alt="the-top" style="height: 30px;">
                     </a>
                 </div>
                 <div class="the-top-banner-text"  style="display:inline-block">
                     <span style="color:rgb(0, 0, 0);margin-right: 6px;margin-left:10px;">COPYTRACK</span>
                     <span class="ad-description" style="color:rgb(0, 0, 0);">–  JOIN THE COPYRIGHT REVOLUTION | $10M+ ALREADY RAISED</span>
                     <span>
-                        <a class="bannerbtn" href="https://copytrack.io/?utm_source=icodrops&amp;utm_medium=banner&amp;utm_campaign=topbanner" onmouseover="this.style.backgroundColor='#d9ad00'" onmouseout="this.style.backgroundColor='#fc0'" target="_blank" rel="nofollow" style="vertical-align: 2px; color: rgb(0, 0, 0); background-color: rgb(255, 204, 0);">SECURE BONUS NOW</a>
+                        <a class="btn btn-outline-success btn-sm" href="https://copytrack.io/?utm_source=icodrops&amp;utm_medium=banner&amp;utm_campaign=topbanner" onmouseover="this.style.backgroundColor='#d9ad00'" onmouseout="this.style.backgroundColor='#fc0'" target="_blank" rel="nofollow" style="vertical-align: 2px; color: rgb(0, 0, 0); background-color: rgb(255, 204, 0);">SECURE BONUS NOW</a>
+
                     </span>
                 </div>
             </div>
@@ -40,7 +41,7 @@
                 <div class="row" id="top-menubar">
                     <div class="col-2">
                         <a href="{% url 'main:home' %}" id="main-logo">
-                            <img id="logo" src="https://icodrops.com/wp-content/uploads/2017/09/LogoDrops.png" alt="Logo">
+                            <img id="logo" src="{% static 'bullrunico.png' %}" alt="Logo">
                         </a>
                     </div>
                     <div class="col-3 main-search">
@@ -86,7 +87,7 @@
                         <ul class="top-social-link">
                             <li class="soc-link"><a href="twitter"><i class="fab fa-twitter"></i><span>Twitter</span><span>(33K)</span></a></li>
                             <li class="soc-link"><a href="telegram"><i class="fab fa-telegram"></i><span>Telegram</span><span>(33K)</span></a></li>
-                            <li class="soc-link"><a href="instagram"><i class="fab fa-instagram"></i><span>Instergram</span><span>(33K)</span></a></li>
+                            <li class="soc-link"><a href="instagram"><i class="fab fa-instagram"></i><span>Instagram</span><span>(33K)</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,41 +98,56 @@
             
             <!-- discus -->
 
-            <!-- footer -->
-            <div class="container">
-                <div class="row" style="height:200px;box-sizing:border-box;border-top: 1px solid rgb(223, 223, 223);margin-top:20px;padding-top:20px;">
-                    <div class="col-lg-4 col-md-4" style="padding:0;">
-                        <img src="https://icodrops.com/wp-content/uploads/2017/09/LogoDrops.png" alt="LOGO" style="width:130px;">
-                        <div>
-                            Made with  for the Decentralized World.
-                            ICO Drops is an independent ICO (Token Sale) database and is not affiliated with any ICO project or company. Our "Interest Level" isn't a financial or investment advice.
-                            © 2018 ICO Drops.
+        </div>
+        <!-- footer -->
+        <div style="padding:0; margin:0; margin-top:50px; background-color: #9fe6a6; width:100%; box-sizing:border-box;border-top: 1px solid rgb(223, 223, 223); border-bottom: 1px solid rgb(223, 223, 223)">
+            <div class="container" style="background-color:#9fe6a6; padding-right:20px;padding-left:20px;">
+                <div class="row" style="height:300px;margin-top:20px;margin-bottom:0px">
+                    <div class="col-lg-3 col-md-3">
+                        <img src="{% static 'bullrunicofooter.png' %}" alt="LOGO" style="width:130px;">
+                        <div style="margin-top:10px; font-size:14px;">
+                            Made to bring transparency to our ICO
+                            investment ecosystem. BullRunICO is not
+                            affiliated or receives any incentive from ICO
+                            projects or blickchain companies. We also do
+                            not give any investment advice, we only provide
+                            information and data to our growing community.
+                        </div>
+                        <div style="margin-top:20px; font-size:15px;">
+                            All rights reserved © 2018 BullRunICO
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-3 col-md-3">
                         <div>
                             <ul style="list-style:none;">
-                                <li>Active ICO</li>
-                                <li>Upcoming ICO</li>
-                                <li>Ended ICO</li>
-                                <li>ICO State</li>
-                                <li>Blog</li>
+                                <li><a href="{% url 'main:category' 'active' %}" style="color:black;">ACTIVE ICO</a></li>
+                                <li><a href="{% url 'main:category' 'upcoming' %}" style="color:black;">UPCOMING ICO</a></li>
+                                <li><a href="{% url 'main:category' 'ended' %}" style="color:black;">ENDED ICO</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-3 col-md-3">
                         <div>
                             <ul style="list-style:none;">
-                                <li>Email</li>
-                                <li>Twitter</li>
-                                <li>Telegram</li>
-                                <li>Instagram</li>
+                                <li><a href="{% url 'main:about' %}" style="color:black;">ABOUT US</a></li>
+                                <li><a href="{% url 'main:adver' %}" style="color:black;">ADVERTISING</a></li>
+                                <li>NEWS</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div>
+                            <ul style="list-style:none;">
+                                <li><a href="twitter" style="color:black;"><i class="fab fa-twitter"></i><span>   Twitter</span></a></li>
+                                <li><a href="telegram" style="color:black;"><i class="fab fa-telegram"></i><span>   Telegram</span></a></li>
+                                <li><a href="instagram" style="color:black;"><i class="fab fa-facebook"></i><span>   Facebook</span></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div><!-- page end -->
 </body>
 </html>

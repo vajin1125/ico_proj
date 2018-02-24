@@ -52,7 +52,7 @@ div.container {
     text-decoration: none;  
 }
 .menu-item a {
-    color: #114abd;
+    color: #0E321A;
 }
 .menu-item a:hover {
     text-decoration: none;  
@@ -310,4 +310,7 @@ div.container {
 table tbody .table-td {
     vertical-align: middle;
 }
+
+
+
 

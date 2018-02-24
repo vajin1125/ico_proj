@@ -4,9 +4,9 @@
 	<div class="row" style="display:flex">
 		<div class="col-12 col-lg-4">
 			<div class="category-table-header">
-				<h4>
+				<h5>
 					<a href="{%url 'main:category' 'active'%}">ACTIVE ICO</a>
-				</h4>
+				</h5>
 			</div>
 			<div class="category1">
 				{% for ico in active_icos %}
@@ -52,9 +52,9 @@
 		</div>
 		<div class="col-12 col-lg-4">
 			<div class="category-table-header">
-				<h4>
+				<h5>
 					<a href="{% url 'main:category' 'upcoming' %}">UPCOMING ICO</a>
-				</h4>
+				</h5>
 			</div>
 			<div class="category1">
 				{% for ico in upcoming_icos %}
@@ -99,9 +99,9 @@
 		</div>
 		<div class="col-12 col-lg-4">
 		<div class="category-table-header">
-				<h4>
+				<h5>
 					<a href="{% url 'main:category' 'ended' %}">ENDED ICO</a>
-				</h4>
+				</h5>
 			</div>
 			<div class="category1">
 				{% for ico in ended_icos %}

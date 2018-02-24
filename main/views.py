@@ -2,13 +2,16 @@ from django.shortcuts import render,get_object_or_404
 from .models import *
 import datetime
 import requests
+
 # Create your views here.
+
 def get_data_from_api(url): # get btc/eth price 24h % change
-	r = requests.get(url)
+	r = requests.get(url, verify="D:/crt/ca.crt")
 	if (r.status_code != 200):	#Fail
 		return ""
 	data = r.json()
 	return data[0]
+	
 def index(request):
 	icos = ICO.objects.all()
 	today = datetime.datetime.today()
@@ -16,6 +19,7 @@ def index(request):
 	upcoming_icos = icos.filter(token_sale_open__gt=today)
 	ended_icos = icos.filter(token_sale_close__lt=today)
 	return render(request,'main/main.html',{'active_icos':active_icos,'upcoming_icos':upcoming_icos,'ended_icos':ended_icos})
+
 def ico_detail(request,pkd):
 	today = datetime.datetime.today()
 	icos = ICO.objects.all()
@@ -33,6 +37,7 @@ def ico_detail(request,pkd):
 		other_icos = ended_icos.exclude(pk = pkd)
 	print(other_icos)
 	return render(request,'main/ico_detail.html',{'ico':ico,'other_icos':other_icos})
+
 def search_ico(request):
 	if request.method == 'GET': # this will be GET now      
 		ico_name =  request.GET.get('search_ico') # do some research what it does    
@@ -41,6 +46,7 @@ def search_ico(request):
 			icos = ICO.objects.filter(name__icontains=ico_name) # filter returns a list so you might consider skip except part
 			return render(request,"main/search.html",{'icos':icos,'search_name':ico_name})
 	return render(request,"main/search.html",{"icos":None,"search_name":""})
+
 def show_by_category(request,category):
 	category_icos = []
 	icos = ICO.objects.all()
@@ -55,3 +61,9 @@ def show_by_category(request,category):
 	else:
 		category_type = "Undefined Category"
 	return render(request,'main/category.html',{'icos':category_icos,'category_type':category_type})
+
+def about(request):
+	return render(request,'main/about.html')
+
+def adver(request):
+	return render(request,'main/adver.html')

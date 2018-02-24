@@ -7,4 +7,6 @@ urlpatterns = [
     url(r'^detail/(?P<pkd>[0-9]+)/',views.ico_detail,name = "detail"),
     url(r'^category/(?P<category>\w{0,50})/',views.show_by_category,name="category"),
     url(r'^search/',views.search_ico,name="search"),
+    url(r'^about/',views.about,name="about"),
+    url(r'^adver/',views.adver,name="adver"),
 ]

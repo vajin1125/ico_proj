@@ -2,12 +2,15 @@ import requests
 from django import template
 register = template.Library()
 def get_data_from_api(url): # get btc/eth price 24h % change
-	r = requests.get(url)
+	r = requests.get(url, verify="D:/crt/ca.crt")
 	if (r.status_code != 200):	#Fail
 		return ""
 	data = r.json()
 	return data[0]
-@register.inclusion_tag('main/btc_eth.html',name = "btc_eth")
+
+@register.inclusion_tag('main/btc_eth.html', name = "btc_eth")
+@register.inclusion_tag('main/contact.html', name = "contact")
+
 def get_btc_eth_info():
 	btc_api_url  ="https://api.coinmarketcap.com/v1/ticker/bitcoin/"
 	eth_api_url = "https://api.coinmarketcap.com/v1/ticker/ethereum/"

@@ -20,6 +20,8 @@ class ICO(models.Model):
 	fundraising_goal = models.CharField(max_length = 200)
 	total_tokens = models.CharField(max_length = 200)
 	accepts = models.CharField(max_length = 200)
+	def __str__(self):
+		return  self.name
 	def date_info(self):
 		today = datetime.date.today()
 		if(self.token_sale_open>today):	#upcoming
@@ -55,15 +57,21 @@ class ATSD(models.Model): # Additional Token Sale Detail
 	ico = models.ForeignKey(ICO, on_delete=models.CASCADE)
 	atsd_name = models.CharField(max_length = 200)
 	atsd_value = models.CharField(max_length = 200)
+	def __str__(self):
+		return  self.ico.name
 class ADLINK(models.Model):
 	ico = models.ForeignKey(ICO, on_delete=models.CASCADE)
 	link_name = models.CharField(max_length = 200)
 	link_value = models.CharField(max_length = 200)
 	link_type = models.CharField(max_length = 200)	# social, not_social
+	def __str__(self):
+		return  self.ico.name
 class REVIEW(models.Model):
 	ico = models.ForeignKey(ICO,on_delete=models.CASCADE)
 	review_option = models.CharField(max_length = 200)
 	review_option_value = models.CharField(max_length = 200)
+	def __str__(self):
+		return  self.ico.name
 class SCREEN_SHOT(models.Model):
 	ico = models.ForeignKey(ICO, on_delete=models.CASCADE)
 	pic_url = models.CharField(max_length = 200)
@@ -71,4 +79,6 @@ class SCREEN_SHOT(models.Model):
 		tmp_url = os.path.basename(self.pic_url)
 		name, extension = os.path.splitext(tmp_url)
 		return name
+	def __str__(self):
+		return  self.ico.name
 

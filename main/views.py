@@ -5,13 +5,6 @@ import requests
 
 # Create your views here.
 
-def get_data_from_api(url): # get btc/eth price 24h % change
-	r = requests.get(url, verify="D:/crt/ca.crt")
-	if (r.status_code != 200):	#Fail
-		return ""
-	data = r.json()
-	return data[0]
-	
 def index(request):
 	icos = ICO.objects.all()
 	today = datetime.datetime.today()

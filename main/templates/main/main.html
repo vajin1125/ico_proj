@@ -40,7 +40,7 @@
 						</div>
 					</a>
 				{% endfor %}
-				<a href="{% url 'main:category' 'active' %}">
+				<a class="allview" href="{% url 'main:category' 'active' %}">
 					<div class="ico-viewall">
 						<span>VIEW ALL </span>
 						<span> {{active_icos|length}}</span>
@@ -87,7 +87,7 @@
 						</div>
 					</a>
 				{% endfor %}
-				<a href="{% url 'main:category' 'upcoming' %}">
+				<a class="allview" href="{% url 'main:category' 'upcoming' %}">
 					<div class="ico-viewall">
 						<span>VIEW ALL </span>
 						<span> {{upcoming_icos|length}}</span>
@@ -134,7 +134,7 @@
 						</div>
 					</a>
 				{% endfor %}
-				<a href="{% url 'main:category' 'ended' %}">
+				<a class="allview" href="{% url 'main:category' 'ended' %}">
 					<div class="ico-viewall">
 						<span>VIEW ALL </span>
 						<span> {{ended_icos|length}}</span>

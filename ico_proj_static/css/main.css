@@ -52,7 +52,7 @@ div.container {
     text-decoration: none;  
 }
 .menu-item a {
-    color: #0E321A;
+    color: black;
 }
 .menu-item a:hover {
     text-decoration: none;  
@@ -303,6 +303,11 @@ div.container {
 .ico-viewall {
     height: 30px;
     text-align: center;
+    color: black;
+}
+.allview:hover {
+    color: black;
+    text-decoration: none;
 }
 .ico-table {
     font-size: 15px;

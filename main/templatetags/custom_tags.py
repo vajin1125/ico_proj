@@ -2,7 +2,7 @@ import requests
 from django import template
 register = template.Library()
 def get_data_from_api(url): # get btc/eth price 24h % change
-	r = requests.get(url, verify="D:/crt/ca.crt")
+	r = requests.get(url)
 	if (r.status_code != 200):	#Fail
 		return ""
 	data = r.json()

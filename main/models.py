@@ -54,12 +54,16 @@ class ICO(models.Model):
 	# bonus = models.CharField(max_length = 200)
 	# pre_sale = models.CharField(max_length = 200)
 class ATSD(models.Model): # Additional Token Sale Detail
+	class Meta:
+		verbose_name = "Additional Token Sale Detail"
 	ico = models.ForeignKey(ICO, on_delete=models.CASCADE)
 	atsd_name = models.CharField(max_length = 200)
 	atsd_value = models.CharField(max_length = 200)
 	def __str__(self):
 		return  self.ico.name
 class ADLINK(models.Model):
+	class Meta:
+		verbose_name = "Additional Link"
 	ico = models.ForeignKey(ICO, on_delete=models.CASCADE)
 	link_name = models.CharField(max_length = 200)
 	link_value = models.CharField(max_length = 200)
@@ -67,14 +71,19 @@ class ADLINK(models.Model):
 	def __str__(self):
 		return  self.ico.name
 class REVIEW(models.Model):
+	class Meta:
+		verbose_name = "Review"
 	ico = models.ForeignKey(ICO,on_delete=models.CASCADE)
 	review_option = models.CharField(max_length = 200)
 	review_option_value = models.CharField(max_length = 200)
 	def __str__(self):
 		return  self.ico.name
 class SCREEN_SHOT(models.Model):
+	class Meta:
+		verbose_name = "Screen Shot"
 	ico = models.ForeignKey(ICO, on_delete=models.CASCADE)
 	pic_url = models.CharField(max_length = 200)
+	# specifications = models.FileField(upload_to='router_specifications')
 	def file_name(self):
 		tmp_url = os.path.basename(self.pic_url)
 		name, extension = os.path.splitext(tmp_url)

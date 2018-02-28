@@ -4,7 +4,8 @@ import datetime
 import os
 # Create your models here.
 class ICO(models.Model):	
-	logo_pic = models.CharField(max_length = 200)
+	# logo_pic = models.CharField(max_length = 200)
+	logo_pic = models.FileField(upload_to='Logos')
 	name = models.CharField(max_length = 200)
 	category = models.CharField(max_length = 200)
 	proj_desc = models.CharField(max_length = 200)
@@ -82,10 +83,10 @@ class SCREEN_SHOT(models.Model):
 	class Meta:
 		verbose_name = "Screen Shot"
 	ico = models.ForeignKey(ICO, on_delete=models.CASCADE)
-	pic_url = models.CharField(max_length = 200)
-	# specifications = models.FileField(upload_to='router_specifications')
+	# pic_url = models.CharField(max_length = 200)
+	pic_url = models.FileField(upload_to='ScreenShots')
 	def file_name(self):
-		tmp_url = os.path.basename(self.pic_url)
+		tmp_url = os.path.basename(self.pic_url.url)
 		name, extension = os.path.splitext(tmp_url)
 		return name
 	def __str__(self):

@@ -26,6 +26,32 @@
 							<img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="logo" width="50px" height="50px">  {{ ico.name }}
 						</a>
 					</td>
+					<td class="table-td">{{ico.interest}}</td>
+					{% if ico.KYC == 'No' %}
+						KYC:No Information
+					{%else%}
+						KYC:{{ico.KYC}}
+					{%endif%}
+					{% if ico.white_list == 'No' %}
+						white_list:No Information
+					{%else%}
+						white_list:{{ico.white_list}}
+					{%endif%}
+					{% if ico.participate == 'No' %}
+						participate:No Information
+					{%else%}
+						participate:{{ico.participate}}
+					{%endif%}
+					{% if ico.bounty == 'No' %}
+						bounty:No Information
+					{%else%}
+						bounty:{{ico.bounty}}
+					{%endif%}
+					{% if ico.bounus == 'No' %}
+						bounus:No Information
+					{%else%}
+						bounus:{{ico.bounus}}
+					{%endif%}
 					<td class="table-td">Interest</td>
 					<td class="table-td">{{ ico.category }}</td>
 					<td class="table-td">undefined</td>
@@ -62,6 +88,33 @@
 							<img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="logo" width="50px" height="50px">  {{ ico.name }}
 						</a>
 					</td>
+					<td class="table-td">{{ico.interest}}</td>
+					{% if ico.KYC == 'No' %}
+						KYC:No Information
+					{%else%}
+						KYC:{{ico.KYC}}
+					{%endif%}
+					{% if ico.white_list == 'No' %}
+						white_list:No Information
+					{%else%}
+						white_list:{{ico.white_list}}
+					{%endif%}
+					{% if ico.participate == 'No' %}
+						participate:No Information
+					{%else%}
+						participate:{{ico.participate}}
+					{%endif%}
+					{% if ico.bounty == 'No' %}
+						bounty:No Information
+					{%else%}
+						bounty:{{ico.bounty}}
+					{%endif%}
+					{% if ico.bounus == 'No' %}
+						bounus:No Information
+					{%else%}
+						bounus:{{ico.bounus}}
+					{%endif%}
+					<br>
 					<td class="table-td">Interest</td>
 					<td class="table-td">{{ ico.category }}</td>
 					<td class="table-td">undefined</td>
@@ -97,12 +150,14 @@
 						<a href="{% url 'main:detail' ico.id %}">
 							<img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="logo" width="50px" height="50px">  {{ ico.name }}
 						</a>
-					</td>
+					</td>	
+					<td class="table-td">{{ico.interest}}</td>
 					<td class="table-td">Interest</td>
 					<td class="table-td">{{ ico.category }}</td>
 					<td class="table-td">undefined</td>
 					<td class="table-td">undefined</td>
 					<td class="table-td">{{ ico.date_info }}</td>
+					market : {{ico.market}}
 					<td class="table-td">?????</td>
 				</tr>
 				{% endfor %}

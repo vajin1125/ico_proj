@@ -37,6 +37,9 @@ class ICO(models.Model):
 		if(self.token_sale_close<today): #ended
 			return "ended"
 		return "active"
+	def addition_links(self):
+		sl = self.adlink_set.all().filter(link_type="not social")
+		return sl
 	def social_links(self):
 		sl = self.adlink_set.all().filter(link_type="social")
 		return sl

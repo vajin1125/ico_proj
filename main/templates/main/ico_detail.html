@@ -56,10 +56,10 @@
 				</div>
 				<div>
 					<div id="goal-2">
-						<span>$2,076,400</span>
+						<span>${{ ico.fundraising_goal }}</span>
 					</div>
 					<div id="goal-3">
-						<span>of </span><span>$16,000,000</span><span> (13%)</span>
+						<span>of </span><span>${{ ico.total_tokens }}</span>
 					</div> 
 					<div id="goal-4">
 						<span>GOAL</span>
@@ -116,27 +116,29 @@
 							<li><span class="token-detail-category">Token type : </span><span class="token-detail-data">{{ ico.token_type }}</span></li>
 							<li><span class="token-detail-category">ICO Token Price : </span><span class="token-detail-data">{{ ico.token_price }}</span></li>
 							<li><span class="token-detail-category">Fundraising Goal : </span><span class="token-detail-data">{{ ico.fundraising_goal }}</span></li>
-							<li><span class="token-detail-category">Sold on pre-sale : </span><span class="token-detail-data"> Bonus up to 233%</span></li>
 							<li><span class="token-detail-category">Total Tokens : </span><span class="token-detail-data">{{ ico.total_tokens }}</span></li>
-							<li><span class="token-detail-category">Available for Token Sale : </span><span class="token-detail-data"> 40%</span></li>
-							<li><span class="token-detail-category">Know Your Customer (KYC) : </span><span class="token-detail-data"> Yes</span></li>
-							<li><span class="token-detail-category">Token Issue : </span><span class="token-detail-data"> 30 days after the close of the public sale and audit</span></li>
 							<li><span class="token-detail-category">Accepts : </span><span class="token-detail-data">{{ ico.accepts }}</span></li>
+							{%for atsd in ico.AdditionalTokenSaleDetails%}
+								<li><span class="token-detail-category">{{atsd.atsd_name}} : </span><span class="token-detail-data">{{atsd.atsd_value}}</span></li>
+							{%endfor%}
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="col-5">
 				<div class="token-desc">
-					<span><i class="fas fa-link"></i></span><span>ADDTIONAL LINKS</span>
+					<span><i class="fas fa-link"></i></span><span>ADDITIONAL LINKS</span>
 				</div>
 				<div class="token-detail">
 					<ul>
-						<li><span class="token-detail-category">Website URL</span></li>
-						<li><span class="token-detail-category">Whitepaper URL</span></li>
-						<li><span class="token-detail-category">Number of Team Members : </span><span> 20</span></li>
+						<!-- <li><span class="token-detail-category">Website URL</span></li>
+						<li><span class="token-detail-category">Whitepaper URL</span></li> -->
+						{%for link in ico.addition_links%}
+							<li><span class="token-detail-category">{{link.link_name}} : </span><span> {{link.link_value}}</span></li>
+						{%endfor%}
+						<!-- <li><span class="token-detail-category">Number of Team Members : </span><span> 20</span></li>
 						<li><span class="token-detail-category">Team from : </span><span> GERMANY</span></li>
-						<li><span class="token-detail-category">Unsold Tokens : </span><span> WILL BE BURED</span></li>
+						<li><span class="token-detail-category">Unsold Tokens : </span><span> WILL BE BURED</span></li> -->
 					</ul>
 				</div>
 			</div>

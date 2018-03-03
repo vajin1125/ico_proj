@@ -1,0 +1,21 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+<h1> Title : {{news.title}}</h1>
+{% if news.photo %}
+	<h1> Photo : {{news.photo}}</h1>
+{% else%}
+	<h1> Photo : No Photo</h1>
+{% endif %}
+{% if news.movie_url%}
+	<h1> Movie : {{news.movie_url}}</h1>
+{% else%}
+	<h1> Movie : No Movie</h1>
+{% endif %}
+<h1>Content : {{news.content}}</h1>
+{% if news.date_info == 0%}
+	<h2> A few moments Ago</h2>
+{% else %}
+	<h2>{{news.date_info}} Hours Ago</h2>
+{% endif %}
+{% endblock %}

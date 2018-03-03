@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if category_type == "active" %}
-<div class="col-lg-12" style="padding:0;margin-top:20px;">
+<div class="col-lg-12" style="padding:0;margin-top:20px;min-height:500px;">
 	<div style="padding-left:10px;">
 		<h4>ACTIVE ICO</h4>
 	</div>
@@ -26,38 +26,52 @@
 							<img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="logo" width="50px" height="50px">  {{ ico.name }}
 						</a>
 					</td>
-					<td class="table-td">{{ico.interest}}</td>
-					{% if ico.KYC == 'No' %}
-						KYC:No Information
-					{%else%}
-						KYC:{{ico.KYC}}
-					{%endif%}
-					{% if ico.white_list == 'No' %}
-						white_list:No Information
-					{%else%}
-						white_list:{{ico.white_list}}
-					{%endif%}
-					{% if ico.participate == 'No' %}
-						participate:No Information
-					{%else%}
-						participate:{{ico.participate}}
-					{%endif%}
-					{% if ico.bounty == 'No' %}
-						bounty:No Information
-					{%else%}
-						bounty:{{ico.bounty}}
-					{%endif%}
-					{% if ico.bounus == 'No' %}
-						bounus:No Information
-					{%else%}
-						bounus:{{ico.bounus}}
-					{%endif%}
-					<td class="table-td">Interest</td>
+					<td class="table-td">sponsored</td>
 					<td class="table-td">{{ ico.category }}</td>
-					<td class="table-td">undefined</td>
-					<td class="table-td">undefined</td>
+					<td class="table-td">${{ ico.fundraising_goal }}</td>
+					<td class="table-td">{{ ico.total_tokens}}</td>
 					<td class="table-td">{{ ico.date_info }} left</td>
-					<td class="table-td">???</td>
+					<td class="table-td">
+						{% if ico.KYC == 'No' %}
+							<!-- KYC:No Information -->
+							<span data-toggle="tooltip" title="KYC:NO INFORMATION"><i class="far fa-user"></i></span>
+						{%else%}
+							<!-- KYC:{{ico.KYC}} -->
+							<span data-toggle="tooltip" title="KYC:YES"><i class="fas fa-user"></i></span>
+						{%endif%}
+
+						{% if ico.white_list == 'No' %}
+							<!-- white_list:No -->
+							<span data-toggle="tooltip" title="WHITELIST:NO INFORMATION"><i class="far fa-file"></i></span>
+						{%else%}
+							<!-- white_list:{{ico.white_list}} -->
+							<span data-toggle="tooltip" title="WHITELIST:YES"><i class="fas fa-file"></i></span>
+						{%endif%}
+
+						{% if ico.participate == 'No' %}
+							<!-- participate:No -->
+							<span data-toggle="tooltip" title="PARTICIPATE:NO INFORMATION"><i class="far fa-circle"></i></span>
+						{%else%}
+							<!-- participate:{{ico.participate}} -->
+							<span data-toggle="tooltip" title="PARTICIPATE:{{ ico.participate }}"><i class="fas fa-circle"></i></span>
+						{%endif%}
+
+						{% if ico.bounty == 'No' %}
+							<!-- bounty:No Information -->
+							<span data-toggle="tooltip" title="BOUNTY:NO INFORMATION"><i class="far fa-heart"></i></span>
+						{%else%}
+							<!-- bounty:{{ico.bounty}} -->
+							<span data-toggle="tooltip" title="BOUNTY:{{ ico.bounty }}"><i class="fas fa-heart"></i></span>
+						{%endif%}
+
+						{% if ico.bounus == 'No' %}
+							<!-- bounus:No Information -->
+							<span data-toggle="tooltip" title="BOUNUS:NO INFORMATION"><i class="far fa-money-bill-alt"></i></span>
+						{%else%}
+							<!-- bounus:{{ico.bounus}} -->
+							<span data-toggle="tooltip" title="BOUNUS:UP TO {{ ico.bounus }}"><i class="fas fa-money-bill-alt"></i></span>
+						{%endif%}
+					</td>
 				</tr>
 				{% endfor %}
 			</tbody>
@@ -66,7 +80,7 @@
 </div>
 
 {% elif category_type == "upcoming" %}
-<div class="col-lg-12" style="padding:0;margin-top:20px;">
+<div class="col-lg-12" style="padding:0;margin-top:20px;min-height:500px;">
 	<div style="padding-left:10px;">
 		<h4>UPCOMING ICO</h4>
 	</div>
@@ -88,38 +102,51 @@
 							<img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="logo" width="50px" height="50px">  {{ ico.name }}
 						</a>
 					</td>
-					<td class="table-td">{{ico.interest}}</td>
-					{% if ico.KYC == 'No' %}
-						KYC:No Information
-					{%else%}
-						KYC:{{ico.KYC}}
-					{%endif%}
-					{% if ico.white_list == 'No' %}
-						white_list:No Information
-					{%else%}
-						white_list:{{ico.white_list}}
-					{%endif%}
-					{% if ico.participate == 'No' %}
-						participate:No Information
-					{%else%}
-						participate:{{ico.participate}}
-					{%endif%}
-					{% if ico.bounty == 'No' %}
-						bounty:No Information
-					{%else%}
-						bounty:{{ico.bounty}}
-					{%endif%}
-					{% if ico.bounus == 'No' %}
-						bounus:No Information
-					{%else%}
-						bounus:{{ico.bounus}}
-					{%endif%}
-					<br>
-					<td class="table-td">Interest</td>
+					<td class="table-td">sponsored</td>
 					<td class="table-td">{{ ico.category }}</td>
-					<td class="table-td">undefined</td>
+					<td class="table-td">${{ ico.total_tokens }}</td>
 					<td class="table-td">{{ ico.date_info }}</td>
-					<td class="table-td">???</td>
+					<td class="table-td">
+						{% if ico.KYC == 'No' %}
+							<!-- KYC:No Information -->
+							<span data-toggle="tooltip" title="KYC:NO INFORMATION"><i class="far fa-user"></i></span>
+						{%else%}
+							<!-- KYC:{{ico.KYC}} -->
+							<span data-toggle="tooltip" title="KYC:YES"><i class="fas fa-user"></i></span>
+						{%endif%}
+
+						{% if ico.white_list == 'No' %}
+							<!-- white_list:No -->
+							<span data-toggle="tooltip" title="WHITELIST:NO INFORMATION"><i class="far fa-file"></i></span>
+						{%else%}
+							<!-- white_list:{{ico.white_list}} -->
+							<span data-toggle="tooltip" title="WHITELIST:YES"><i class="fas fa-file"></i></span>
+						{%endif%}
+
+						{% if ico.participate == 'No' %}
+							<!-- participate:No -->
+							<span data-toggle="tooltip" title="PARTICIPATE:NO INFORMATION"><i class="far fa-circle"></i></span>
+						{%else%}
+							<!-- participate:{{ico.participate}} -->
+							<span data-toggle="tooltip" title="PARTICIPATE:{{ ico.participate }}"><i class="fas fa-circle"></i></span>
+						{%endif%}
+
+						{% if ico.bounty == 'No' %}
+							<!-- bounty:No Information -->
+							<span data-toggle="tooltip" title="BOUNTY:NO INFORMATION"><i class="far fa-heart"></i></span>
+						{%else%}
+							<!-- bounty:{{ico.bounty}} -->
+							<span data-toggle="tooltip" title="BOUNTY:{{ ico.bounty }}"><i class="fas fa-heart"></i></span>
+						{%endif%}
+
+						{% if ico.bounus == 'No' %}
+							<!-- bounus:No Information -->
+							<span data-toggle="tooltip" title="BOUNUS:NO INFORMATION"><i class="far fa-money-bill-alt"></i></span>
+						{%else%}
+							<!-- bounus:{{ico.bounus}} -->
+							<span data-toggle="tooltip" title="BOUNUS:UP TO {{ ico.bounus }}"><i class="fas fa-money-bill-alt"></i></span>
+						{%endif%}
+					</td>
 				</tr>
 				{% endfor %}
 			</tbody>
@@ -128,7 +155,7 @@
 </div>
 
 {% elif category_type == "ended" %}
-<div class="col-lg-12" style="padding:0;margin-top:20px;">
+<div class="col-lg-12" style="padding:0;margin-top:20px;min-height:500px;">
 	<div style="padding-left:10px;">
 		<h4>ENDED ICO</h4>
 	</div>
@@ -150,15 +177,14 @@
 						<a href="{% url 'main:detail' ico.id %}">
 							<img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="logo" width="50px" height="50px">  {{ ico.name }}
 						</a>
-					</td>	
-					<td class="table-td">{{ico.interest}}</td>
-					<td class="table-td">Interest</td>
+					</td>
+					<td class="table-td">sponsored</td>
 					<td class="table-td">{{ ico.category }}</td>
-					<td class="table-td">undefined</td>
-					<td class="table-td">undefined</td>
+					<td class="table-td">${{ ico.fundraising_goal }}</td>
+					<td class="table-td">${{ ico.total_tokens }}</td>
 					<td class="table-td">{{ ico.date_info }}</td>
-					market : {{ico.market}}
-					<td class="table-td">?????</td>
+					<!-- market : {{ico.market}} -->
+					<td class="table-td">{{ ico.market }}</td>
 				</tr>
 				{% endfor %}
 			</tbody>
@@ -167,6 +193,12 @@
 </div>
 
 {% endif %}
+
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();   
+	});
+</script>
 
 {% endblock %}
 

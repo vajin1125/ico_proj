@@ -134,7 +134,9 @@
 						<!-- <li><span class="token-detail-category">Website URL</span></li>
 						<li><span class="token-detail-category">Whitepaper URL</span></li> -->
 						{%for link in ico.addition_links%}
-							<li><span class="token-detail-category">{{link.link_name}} : </span><span> {{link.link_value}}</span></li>
+							<a href="{{ link.link_value }}">
+								<li><span class="token-detail-category">{{link.link_name}}</span> <i class="fas fa-external-link-alt"></i></li>
+							</a>
 						{%endfor%}
 						<!-- <li><span class="token-detail-category">Number of Team Members : </span><span> 20</span></li>
 						<li><span class="token-detail-category">Team from : </span><span> GERMANY</span></li>
@@ -143,6 +145,18 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- <div class="row">
+			<div class="col-12 token-desc">
+				<span><i class="fas fa-rss-square"></i></span> <span>SHORT REVIEW</span>
+			</div>
+			<div>
+				<p>
+					{{ ico.review_option }} : {{ ico.review_option_value }}
+
+				</p>
+			</div>
+		</div> -->
 
 		<div class="row">
 			<div class="col-12 token-desc">

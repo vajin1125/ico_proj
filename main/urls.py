@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^search/',views.search_ico,name="search"),
     url(r'^about/',views.about,name="about"),
     url(r'^adver/',views.adver,name="adver"),
+    url(r'^news/',views.news,name="news"),
 ]

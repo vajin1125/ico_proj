@@ -1,6 +1,87 @@
 {% extends "main/base.html" %}
 {% load static %}
 {% block content %}
+<div style="min-height:450px">
+    <div id="top-breadcrumb">
+        <ol class="breadcrumb" style="background-color:#fff;">
+            <li class="breadcrumb-item"><a href="{% url 'main:home'%}" style="color:black">BullrunICO</a></li>
+            <li class="breadcrumb-item active">NEWS</li>
+        </ol>
+    </div>
+
+    <!-- Title -->
+    <div class="text-uppercase" style="text-align:center">
+		<h4>{{news.title}}</h4>
+    </div>
+
+    <!-- media : photo or video -->
+    <div style="text-align:center;margin-top:30px;">
+		{% if news.photo %}
+		<div class="col-12" style="margin-bottom:20px;">
+			<img src="{% static news.photo %}" alt="blog photo">
+		</div>
+		{% endif %}
+
+		{% if news.movie_url%}
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8" id="ico-video">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="{{ news.movie_url }}" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-2"></div>
+		</div>
+		{% endif %}
+    </div>
+
+	<!-- contents -->
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-8" style="text-align:justify;margin-top:30px;">
+			<p style="font-size:18px;">{{ news.content }}</p>
+		</div>
+		<div class="col-2"></div>
+	</div>
+    <!-- sponsor or news or analysis -->
+    <div class="row" style="margin-top:30px;">
+		<div class="col-2"></div>
+		<div class="col-4" style="text-align:left">
+			<div style="width:100px;height:25px;background-color:rgb(255, 217, 1);text-align:center;box-shadow:2px 4px 2px #000;">
+				<p>{{ news.sponsor }}</p>
+			</div>
+		</div>
+		<div class="col-4" style="text-align:right">
+			{% if news.date_info == 0%}
+				<p> A few moments Ago</p>
+			{% else %}
+				<p>{{ news.date_info }} Hours Ago</p>
+			{% endif %}
+		</div>
+		<div class="col-2"></div>
+	</div>
+	<div style="text-align:center; margin-top:60px;">
+		<div>
+			<h4>Share our news</h4>
+		</div>
+		<div style="margin-top:30px;">
+			<ul style="list-style:none;">
+				<li style="display:inline-block; margin:auto 50px;"><a href="twitter" style="color:black;"><i class="fab fa-twitter"></i><span>   Twitter 33K</span></a></li>
+				<li style="display:inline-block; margin:auto 50px;"><a href="telegram" style="color:black;"><i class="fab fa-telegram"></i><span>   Telegram 33K</span></a></li>
+				<li style="display:inline-block; margin:auto 50px;"><a href="instagram" style="color:black;"><i class="fab fa-instagram"></i><span>   Instagram 33K</span></a></li>
+				<!-- <li style="display:inline-block; margin:auto 50px;"><a href="facebook" style="color:black;"><i class="fab fa-facebook"></i><span>   BullRunICO</span></a></li> -->
+			</ul>
+		</div>
+		<!-- <div style="margin-top:30px;">
+			<H6>Email: support@bullrunico.com</H6>
+		</div> -->
+	</div>
+</div>
+
+{% endblock %}
+
+
+<!-- 
 <h1> Title : {{news.title}}</h1>
 {% if news.photo %}
 	<h1> Photo : {{news.photo}}</h1>
@@ -18,4 +99,4 @@
 {% else %}
 	<h2>{{news.date_info}} Hours Ago</h2>
 {% endif %}
-{% endblock %}
+-->

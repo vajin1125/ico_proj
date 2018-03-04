@@ -60,3 +60,6 @@ def about(request):
 
 def adver(request):
 	return render(request,'main/adver.html')
+
+def news(request):
+	return render(request,'main/news.html')

@@ -1,6 +1,12 @@
 {% extends "main/base.html" %}
 {% load static %}
 {% block content %}
+<div id="top-breadcrumb">
+    <ol class="breadcrumb" style="background-color:#fff;">
+        <li class="breadcrumb-item"><a href="{% url 'main:home'%}" style="color:black">BullrunICO</a></li>
+        <li class="breadcrumb-item active">About</li>
+    </ol>
+</div>
 <div style="margin-top:40px;">
     <div style="text-align:center;">
         <h4>ABOUT US</h4>

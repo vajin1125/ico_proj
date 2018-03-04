@@ -3,7 +3,7 @@
 {% block content %}
 	<div id="top-breadcrumb">
 		<ol class="breadcrumb" style="background-color:#fff;">
-			<li class="breadcrumb-item"><a href="{% url 'main:home'%}" style="color:black">ICO detective</a></li>
+			<li class="breadcrumb-item"><a href="{% url 'main:home'%}" style="color:black">BullrunICO</a></li>
 			{% if ico.status == "active" %}
 			<li class="breadcrumb-item"><a href="{% url 'main:category' 'active' %}" style="color:black">Active ICO</a></li>
 			{% elif ico.status == "upcoming" %}

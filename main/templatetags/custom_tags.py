@@ -1,5 +1,6 @@
 import requests
 from django import template
+from main.models import Advertise
 register = template.Library()
 def get_data_from_api(url): # get btc/eth price 24h % change
 	r = requests.get(url, verify="D:/crt/ca.crt")
@@ -21,3 +22,7 @@ def get_btc_eth_info():
 	eth_info = {'price':float(data['price_usd']),'change':float(data['percent_change_24h'])}
 	print(eth_info)
 	return {'bitcoin_info':bitcoin_info,'eth_info':eth_info}
+@register.inclusion_tag('main/head_ads.html', name = "ads")
+def header_ad():
+	ads = Advertise.objects.all()[0]
+	return {'ads':ads}

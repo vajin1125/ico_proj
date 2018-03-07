@@ -15,26 +15,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    {% load custom_tags %}
 </head>
 <body>
     <div>
         <header> 
             <!-- abs banner -->
-            <div class="text-center" style="background-color: yellow; box-shadow: none; padding-top:5px;padding-bottom:5px;">
+            {% ads %}
+<!--             <div class="text-center" style="background-color: yellow; box-shadow: none; padding-top:5px;padding-bottom:5px;">
                 <div style="display:inline-block">
                     <a href="https://copytrack.io/?utm_source=icodrops&amp;utm_medium=banner&amp;utm_campaign=topbanner" target="_blank">
                         <img class="ad-logo" src="{% static 'bitcoin.png' %}" alt="the-top" style="height: 30px;">
                     </a>
                 </div>
                 <div class="the-top-banner-text"  style="display:inline-block">
-                    <span style="color:rgb(0, 0, 0);margin-right: 6px;margin-left:10px;">COPYTRACK</span>
-                    <span class="ad-description" style="color:rgb(0, 0, 0);">–  JOIN THE COPYRIGHT REVOLUTION | $10M+ ALREADY RAISED</span>
+                 <span class="ad-description" style="color:rgb(0, 0, 0);"> COPYTRACK –  JOIN THE    COPYRIGHT REVOLUTION | $10M+ ALREADY RAISED</span>
                     <span>
                         <a class="btn btn-outline-success btn-sm" href="https://copytrack.io/?utm_source=icodrops&amp;utm_medium=banner&amp;utm_campaign=topbanner" target="_blank" rel="nofollow" style="vertical-align: 2px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);">SECURE BONUS NOW</a>
 
                     </span>
                 </div>
-            </div>
+            </div> -->
             <!-- abs banner end -->
 
             <div class="container">
@@ -94,7 +95,7 @@
         <div class="container">
             <div class="main-page">
                 <div class="row">
-                    {% load custom_tags %}
+
                     {% btc_eth %}
                     <div class="col-8">
                         <ul class="top-social-link">

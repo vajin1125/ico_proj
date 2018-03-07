@@ -3,6 +3,11 @@ from django.utils.timesince import timesince
 import datetime
 import os
 # Create your models here.
+# from preferences.models import Preferences
+
+# class MyPreferences(Preferences):
+#     portal_contact_email = models.EmailField()
+#     file = models.FileField()
 class ICO(models.Model):	
 	# logo_pic = models.CharField(max_length = 200)
 	logo_pic = models.FileField(upload_to='Logos')
@@ -122,6 +127,13 @@ class ADLINK(models.Model):
 	link_type = models.CharField(max_length = 20,choices = link_str)	# social, not_social
 	def __str__(self):
 		return  self.ico.name
+class Advertise(models.Model):
+	class Meta:
+		verbose_name_plural = "Advertise"
+	logo_pic = models.FileField(upload_to='Logos')
+	text = models.CharField(max_length = 200)
+	url_button = models.CharField(max_length = 200)
+			
 class REVIEW(models.Model):
 	class Meta:
 		verbose_name = "Review"

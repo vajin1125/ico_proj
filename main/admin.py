@@ -2,6 +2,10 @@ from django.contrib import admin
 from .models import *
 
 # Register your models here.
+
+# from preferences.admin import PreferencesAdmin
+
+# admin.site.register(MyPreferences, PreferencesAdmin)
 class ICOAdmin(admin.ModelAdmin):
     list_display = ('name', 'category', 'proj_desc','ticker','token_price')
 class ATSDAdmin(admin.ModelAdmin):
@@ -12,6 +16,7 @@ class ADLINKAdmin(admin.ModelAdmin):
 	list_display=('ico','link_name','link_value','link_type')
 class REVIEWAdmin(admin.ModelAdmin):
 	list_display=('ico','review_option','review_option_value')
+admin.site.register(Advertise)
 admin.site.register(ICO, ICOAdmin)
 admin.site.register(ATSD,ATSDAdmin)
 admin.site.register(ADLINK,ADLINKAdmin)

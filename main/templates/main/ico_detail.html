@@ -225,7 +225,7 @@
 		<!-- ico card -->
 		{%for ico in other_icos%}
 		<div class="col-md-6 ico-card card-shadow main-card">
-			<a href="{% url 'main:detail' ico.id %}">
+			<a href="{% url 'main:detail' ico.status ico.url_name %}">
 				<div class="row ico-row">
 					<div class="ico-icon">
 						<img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO">

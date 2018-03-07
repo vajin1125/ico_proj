@@ -33,6 +33,9 @@ class ICO(models.Model):
 	market = models.CharField(max_length = 30,null=True, blank=True)
 	def __str__(self):
 		return  self.name
+	def url_name(self):
+		url = self.name.split(".")[0]
+		return url
 	def date_info(self):
 		today = datetime.date.today()
 		if(self.token_sale_open>today):	#upcoming

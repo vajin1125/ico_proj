@@ -13,21 +13,22 @@ def index(request):
 	ended_icos = icos.filter(token_sale_close__lt=today)
 	return render(request,'main/main.html',{'active_icos':active_icos,'upcoming_icos':upcoming_icos,'ended_icos':ended_icos})
 
-def ico_detail(request,pkd):
+def ico_detail(request,category,name):
 	today = datetime.datetime.today()
 	icos = ICO.objects.all()
-	ico = get_object_or_404(ICO,pk=pkd)	
+	ico = get_object_or_404(ICO,name__icontains=name)
+	ico_id = ico.id	
 	active_icos = icos.filter(token_sale_open__lte=today,token_sale_close__gte=today)
 	upcoming_icos = icos.filter(token_sale_open__gt=today)
 	ended_icos = icos.filter(token_sale_close__lt=today)
 	other_icos = []
 	if ico.status() == "active":
-		other_icos = active_icos.exclude(pk = pkd)
+		other_icos = active_icos.exclude(pk = ico_id)
 	elif ico.status() == "upcoming":
 		print("upcoming")
-		other_icos = upcoming_icos.exclude(pk = pkd)
+		other_icos = upcoming_icos.exclude(pk = ico_id)
 	elif ico.status() == "ended":
-		other_icos = ended_icos.exclude(pk = pkd)
+		other_icos = ended_icos.exclude(pk = ico_id)
 	print(other_icos)
 	return render(request,'main/ico_detail.html',{'ico':ico,'other_icos':other_icos})
 

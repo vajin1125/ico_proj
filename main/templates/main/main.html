@@ -10,7 +10,7 @@
 			</div>
 			<div class="category1">
 				{% for ico in active_icos %}
-					<a id="n-color" href="{%url 'main:detail' ico.id%}">
+					<a id="n-color" href="{%url 'main:detail' ico.status ico.url_name %}">
 						<div class="ico-card main-card">
 							<div class="ico-card-row">
 								<div class="ico-card-icon" style="display:inline-block">
@@ -57,7 +57,7 @@
 			</div>
 			<div class="category1">
 				{% for ico in upcoming_icos %}
-					<a id="n-color" href="{%url 'main:detail' ico.id%}">
+					<a id="n-color" href="{%url 'main:detail' ico.status ico.url_name%}">
 						<div class="ico-card main-card">
 							<div class="ico-card-row">
 								<div class="ico-card-icon" style="display:inline-block;">
@@ -104,7 +104,7 @@
 			</div>
 			<div class="category1">
 				{% for ico in ended_icos %}
-					<a id="n-color" href="{%url 'main:detail' ico.id%}">
+					<a id="n-color" href="{%url 'main:detail' ico.status ico.url_name%}">
 						<div class="ico-card main-card">
 							<div class="ico-card-row">
 								<div class="ico-card-icon" style="display:inline-block;">

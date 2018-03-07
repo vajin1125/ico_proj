@@ -20,7 +20,7 @@
                 {% for ico in icos %}
                 <tr>
                     <td class="table-td">
-                        <a href="{% url 'main:detail' ico.id %}">
+                        <a href="{% url 'main:detail' ico.status ico.url_name %}">
                             <img class="img-fluid rounded-circle" src="{% static ico.logo_pic %}" alt="logo" width="50px" height="50px">  {{ ico.name }}
                         </a>
                     </td>
@@ -42,7 +42,7 @@
         <div class="category1">
             {% for ico in icos %}
 
-                <a id="n-color" href="{%url 'main:detail' ico.id%}">
+                <a id="n-color" href="{%url 'main:detail' ico.status ico.url_name%}">
                     <div class="ico-card main-card">
                         <div class="ico-card-row">
                             <div class="ico-card-icon" style="display:inline-block;">

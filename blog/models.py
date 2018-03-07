@@ -5,6 +5,8 @@ from froala_editor.fields import FroalaField
 class News(models.Model):
 	class Meta:
 		verbose_name_plural = "News"
+	author_image = models.FileField(verbose_name = "Author Image ",upload_to='News/Author')
+	author_name = models.CharField(verbose_name = "Author Name",max_length=50)
 	title = models.CharField(verbose_name="Title",max_length = 100)
 	photo = models.FileField(upload_to='News/Photo',blank=True, null=True)
 	movie_url = models.CharField(max_length = 100,blank=True, null=True)

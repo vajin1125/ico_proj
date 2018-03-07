@@ -17,27 +17,26 @@
 	<!-- project description -->
 	<div id="main-desc">
 		<div class="row">
-			<div class="col-1">
+			<div class="col-12">
 				<img class="rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO" style="width:60px;height:60px;">
-			</div>
-			<div class="col">
 				<span id="ico-name">{{ ico.name }}</span>
-				<span>({{ ico.category }})</span>
+				<span id="ico-category">({{ ico.category }})</span>
+				<span id="ico-desc">{{ ico.proj_desc }}</span>
 			</div>
 		</div>
-		<div class="row" id="ico-description">
+		<!-- <div class="row" id="ico-description">
 			<span>{{ ico.proj_desc }}</span>
-		</div>
+		</div> -->
 
 		<div class="row content1">
 			<!-- video -->
-			<div class="col-8" id="ico-video">
+			<div class="col-lg-8 col-md-12" id="ico-video">
 				<div class="embed-responsive embed-responsive-16by9">
 					<iframe class="embed-responsive-item" src="{{ ico.movie_url }}" allowfullscreen></iframe>
 				</div>
 			</div>
 			<!-- goal -->
-			<div class="col-4">
+			<div class="col-lg-4 col-md-12 grup-info">
 				<div id="goal-1">
 					{% if ico.status == "active" %}
 
@@ -58,16 +57,20 @@
 					<div id="goal-2">
 						<span>${{ ico.fundraising_goal }}</span>
 					</div>
-					<div id="goal-3">
+					<!-- <div id="goal-3">
 						<span>of </span><span>${{ ico.total_tokens }}</span>
-					</div> 
+					</div>  -->
 					<div id="goal-4">
 						<span>GOAL</span>
 					</div>
 				</div>
-				<div>
-					<div class="goal-btn"><a href="{{ ico.site_url }}" class="btn btn-info" target="_blank" role="button" style="width:40%;height:40px;border-radius:0px;border:1px;">WEBSITE</a></div>
-					<div class="goal-btn"><a href="{{ ico.whitepaper_url }}" class="btn btn-info" target="_blank" role="button" style="width:40%;height:40px;border-radius:0px;border:1px;">WHITEPAPER</a></div>
+				<div id="button-grp">
+					<div>
+						<a href="{{ ico.site_url }}" class="btn btn-info goal-btn" target="_blank" role="button">WEBSITE</a>
+					</div>
+					<div>
+						<a href="{{ ico.whitepaper_url }}" class="btn btn-info goal-btn" target="_blank" role="button">WHITEPAPER</a>
+					</div>
 				</div>
 				<div style="margin-top:10px;color:grey;">Social Links</div>
 				<div class="soc-goal">
@@ -103,7 +106,7 @@
 		</div>
 
 		<div class="row content2">
-			<div class="col-7">
+			<div class="col-lg-7 col-md-12">
 				<div class="token-desc">
 					<span><i class="fas fa-calendar-alt"></i></span>
 					<span>TOKEN SALE : </span><span>{{ ico.token_sale_open }}</span><span>-</span><span>{{ ico.token_sale_close }}</span>
@@ -125,7 +128,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-5">
+			<div class="col-lg-5 col-md-12">
 				<div class="token-desc">
 					<span><i class="fas fa-link"></i></span><span>ADDITIONAL LINKS</span>
 				</div>
@@ -218,7 +221,7 @@
 		</div>
 	</div><!-- other ICO end -->
 
-	<div class="row col-12" style="padding:20px;margin-top:40px;">
+	<div class="row" id="other-ico" style="padding:20px;margin-top:20px;">
 		<!-- ico card -->
 		{%for ico in other_icos%}
 		<div class="col-md-6 ico-card card-shadow main-card">
@@ -231,13 +234,16 @@
 						<h5>{{ ico.name }}</h5>
 						<div class="ico-category-name"><span>{{ ico.category }}</span></div>
 						<div class="goal-in-card">
-							<span>$35,200,000</span>
-							<span>/$75,000,000</span>
-							<span>%47</span>
+							<span class="curency">${{ ico.fundraising_goal }}</span>
+							<span>/{{ ico.total_tokens }}</span>
 						</div>
-						<div class="interest" style="display:inline-block">Not Rated</div>
-						<div class="date" style="display:inline-block">{{ ico.date_info }} left</div>
 					</div>
+				</div>
+				<div class="interest" style="display:inline-block;">
+					<span style="color:black">{{ ico.interest }}</span>
+				</div>
+				<div class="date" style="float:right;">
+					<span style="color:black">{{ ico.date_info}}</span>
 				</div>
 			</a>
 		</div>

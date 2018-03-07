@@ -2,22 +2,21 @@
 {%load static%}
 {%block content%}
 	<div class="row" style="display:flex;min-height:500px;">
-		<div class="col-12 col-lg-4">
+		<div class="col-md-12 col-lg-4">
 			<div class="category-table-header">
-				<h5>
+				<h5 style="text-align:center; font-weight:bold">
 					<a href="{%url 'main:category' 'active'%}">ACTIVE ICO</a>
 				</h5>
 			</div>
 			<div class="category1">
 				{% for ico in active_icos %}
-
 					<a id="n-color" href="{%url 'main:detail' ico.id%}">
 						<div class="ico-card main-card">
 							<div class="ico-card-row">
-								<div class="ico-card-icon" style="display:inline-block;">
-									<img class="rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO" width="60" height="60">
+								<div class="ico-card-icon" style="display:inline-block">
+									<img class="rounded-circle" src="{% static ico.logo_pic %}" alt="LOGO" width="60">
 								</div>
-								<div class="ico-card-main-info" style="display:inline-block;">
+								<div class="ico-card-main-info" style="display:inline-block;width:auto">
 									<h5>
 										{{ico.name}}
 									</h5>
@@ -25,17 +24,17 @@
 										{{ico.category}}
 									</div>
 									<div class="goal-in-card">
-										<span class="curency">$ {{ ico.fundraising_goal }}</span>
-										<span>/ {{ ico.total_tokens }}</span>
+										<span class="curency">${{ ico.fundraising_goal }}</span>
+										<span>/{{ ico.total_tokens }}</span>
 										<span></span>
 									</div>
 								</div>
 							</div>
 							<div class="interest" style="display:inline-block;">
-								<span>sponsored</span>
+								<span>{{ ico.interest }}</span>
 							</div>
 							<div class="date" style="float:right;">
-								<span>{{ ico.date_info}}d left</span>
+								<span>{{ ico.date_info}}d</span>
 							</div>
 						</div>
 					</a>
@@ -50,9 +49,9 @@
 				</a>
 			</div>
 		</div>
-		<div class="col-12 col-lg-4">
+		<div class="col-md-12 col-lg-4">
 			<div class="category-table-header">
-				<h5>
+				<h5 style="text-align:center; font-weight:bold">
 					<a href="{% url 'main:category' 'upcoming' %}">UPCOMING ICO</a>
 				</h5>
 			</div>
@@ -72,14 +71,14 @@
 										{{ico.category}}
 									</div>
 									<div class="goal-in-card">
-										<span class="curency">$ {{ ico.fundraising_goal }}</span>
-										<span>/ {{ ico.total_tokens }}</span>
+										<span class="curency">${{ ico.fundraising_goal }}</span>
+										<span>/{{ ico.total_tokens }}</span>
 										<span></span>
 									</div>
 								</div>
 							</div>
 							<div class="interest" style="display:inline-block;">
-								<span>sponsored</span>
+								<span>{{ ico.interest }}</span>
 							</div>
 							<div class="date" style="float:right">
 								<span>{{ ico.date_info}} left</span>
@@ -97,9 +96,9 @@
 				</a>
 			</div>
 		</div>
-		<div class="col-12 col-lg-4">
+		<div class="col-md-12 col-lg-4">
 		<div class="category-table-header">
-				<h5>
+				<h5 style="text-align:center; font-weight:bold">
 					<a href="{% url 'main:category' 'ended' %}">ENDED ICO</a>
 				</h5>
 			</div>
@@ -119,14 +118,14 @@
 										{{ico.category}}
 									</div>
 									<div class="goal-in-card">
-										<span class="curency">$ {{ ico.fundraising_goal }}</span>
-										<span>/ {{ ico.total_tokens }}</span>
+										<span class="curency">${{ ico.fundraising_goal }}</span>
+										<span>/{{ ico.total_tokens }}</span>
 										<span></span>
 									</div>
 								</div>
 							</div>
 							<div class="interest" style="display:inline-block;">
-								<span>sponsored</span>
+								<span>{{ ico.interest }}</span>
 							</div>
 							<div class="date" style="float:right">
 								<span>{{ ico.date_info}} Ended</span>

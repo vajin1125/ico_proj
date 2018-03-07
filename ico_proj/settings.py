@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 # FROALA PLUGIN SETTINGS
-FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'colors', 'emoticons',
+FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'colors', 
         'entities', 'font_family', 'font_size', 'fullscreen', 
         'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quick_insert', 'quote')
 MIDDLEWARE = [

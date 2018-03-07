@@ -38,8 +38,8 @@
 	<!-- contents -->
 	<div class="row">
 		<div class="col-2"></div>
-		<div class="col-8" style="text-align:justify;margin-top:30px;">
-			<p style="font-size:18px;">{{ news.content }}</p>
+		<div class="col-8" style="text-align:justify;margin-top:30px;">			
+			{{ news.content |safe }}
 		</div>
 		<div class="col-2"></div>
 	</div>

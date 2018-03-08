@@ -60,6 +60,21 @@
 		</div>
 		<div class="col-2"></div>
 	</div>
+
+	<div class="row author">
+		<div class="col-2"></div>
+		<div class="col-4"></div>
+		<div class="col-4">
+			<div style="float:right">
+				<div class="author-img">
+					<img class="img-fluid rounded-circle" src="{% static news.author_image %}" alt="auther photo">
+				</div>
+				<span>By </span><span style="font-weight:700"> {{news.author_name}}</span>
+			</div>
+		</div>
+		<div class="col-2"></div>
+	</div>
+
 	<div style="text-align:center; margin-top:60px;">
 		<div>
 			<h4>Share our news</h4>
@@ -72,13 +87,6 @@
 				<!-- <li style="display:inline-block; margin:auto 50px;"><a href="facebook" style="color:black;"><i class="fab fa-facebook"></i><span>   BullRunICO</span></a></li> -->
 			</ul>
 		</div>
-		<div>
-			<img class="img-fluid" src="{% static news.author_image %}" alt="blog photo">
-			{{news.author_name}}
-		</div>
-		<!-- <div style="margin-top:30px;">
-			<H6>Email: support@bullrunico.com</H6>
-		</div> -->
 	</div>
 </div>
 

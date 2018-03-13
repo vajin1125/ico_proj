@@ -11,86 +11,32 @@
   </div>
 
   <div class="row">
-    <a href="#">
+    {% for item in news %}
+    <a href="{% url 'blog:home' item.title|slice:':10' 0 %}">
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="blog-card">
           <div class="blog-image">
-            <img class="img-fluid" src="https://cointelegraph.com/images/373_Ly9jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy85MDA3OWJlZDhmNzE0MWIyZmM0N2Y5NzE3M2UwOTgyZC5qcGc=.jpg" alt="blog image">
+          {%if item.photo %}  
+            <img class="img-fluid" src="{% static item.photo %}">
+          {%endif%}
           </div>
           <div class="blog-title">
-            <a href="#"><p>Bitcoin, Ethereum, Bitcoin Cash, Ripple, Stellar, Litecoin, Cardano, NEO, EOS: Price Analysis, March 12</p></a>
+            <a href="#"><p>{{item.title}}</p></a>
           </div>
           <div class="author-date">
-            <span id="author">By admin</span>
-            <span id="date">2 hours ago</span>
+            <span id="author">By {{news.author_name}}</span>
+            <span id="date">
+              {% if item.date_info == 0 %}
+                A few moments Ago
+              {% else %}
+                {{ item.date_info }} Hours Ago
+              {% endif %}
+            </span>
           </div>
         </div>
       </div>
     </a>
-    <a href="#">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img class="img-fluid" src="https://cointelegraph.com/images/373_Ly9jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy85MDA3OWJlZDhmNzE0MWIyZmM0N2Y5NzE3M2UwOTgyZC5qcGc=.jpg" alt="blog image">
-          </div>
-          <div class="blog-title">
-            <a href="#"><p>this is a blog title</p></a>
-          </div>
-          <div class="author-date">
-            <span id="author">By admin</span>
-            <span id="date">2 hours ago</span>
-          </div>
-        </div>
-      </div>
-    </a>
-    <a href="#">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img class="img-fluid" src="https://cointelegraph.com/images/373_Ly9jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy85MDA3OWJlZDhmNzE0MWIyZmM0N2Y5NzE3M2UwOTgyZC5qcGc=.jpg" alt="blog image">
-          </div>
-          <div class="blog-title">
-            <a href="#"><p>this is a blog title</p></a>
-          </div>
-          <div class="author-date">
-            <span id="author">By admin</span>
-            <span id="date">2 hours ago</span>
-          </div>
-        </div>
-      </div>
-    </a>
-    <a href="#">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img class="img-fluid" src="https://cointelegraph.com/images/373_Ly9jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy85MDA3OWJlZDhmNzE0MWIyZmM0N2Y5NzE3M2UwOTgyZC5qcGc=.jpg" alt="blog image">
-          </div>
-          <div class="blog-title">
-            <a href="#"><p>this is a blog title</p></a>
-          </div>
-          <div class="author-date">
-            <span id="author">By admin</span>
-            <span id="date">2 hours ago</span>
-          </div>
-        </div>
-      </div>
-    </a>
-    <a href="#">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img class="img-fluid" src="https://cointelegraph.com/images/373_Ly9jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy85MDA3OWJlZDhmNzE0MWIyZmM0N2Y5NzE3M2UwOTgyZC5qcGc=.jpg" alt="blog image">
-          </div>
-          <div class="blog-title">
-            <a href="#"><p>this is a blog title</p></a>
-          </div>
-          <div class="author-date">
-            <span id="author">By admin</span>
-            <span id="date">2 hours ago</span>
-          </div>
-        </div>
-      </div>
-    </a>
+    {% endfor %}    
   </div>
 </div>
 

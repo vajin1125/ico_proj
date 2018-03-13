@@ -1,4 +1,8 @@
 {% extends "main/base.html" %}
+{% block seo%}
+<title> {{news.title}} </title>
+<meta name="description" content="{{news.content|striptags|slice:':255'}}">
+{% endblock %}
 {% load static %}
 {% block content %}
 <div style="min-height:450px">

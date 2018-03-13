@@ -79,7 +79,7 @@
                                 <a class="" href="{% url 'main:category' 'stats' %}"><strong>ICO STATS</strong></a>
                             </li>
                             <li class="menu-item">
-                                <a class="" href="{% url 'blog:home'%}"><strong>NEWS</strong></a>
+                                <a class="" href="{% url 'blog:initial_home'%}"><strong>NEWS</strong></a>
                             </li>
                             <li class="menu-item" id="menu-search">
                                 <form class="form-inline" method="get" action="{% url 'main:search' %}">
@@ -154,7 +154,7 @@
                             <ul style="list-style:none;">
                                 <li><a href="{% url 'main:about' %}" style="color:rgb(152, 153, 153);">ABOUT US</a></li>
                                 <li><a href="{% url 'main:adver' %}" style="color:rgb(152, 153, 153);">ADVERTISING</a></li>
-                                <li><a href="{% url 'blog:home' %}" style="color:rgb(152, 153, 153);">NEWS</a></li>
+                                <li><a href="{% url 'blog:initial_home' %}" style="color:rgb(152, 153, 153);">NEWS</a></li>
                             </ul>
                         </div>
                     </div>
@@ -193,5 +193,6 @@
             });   
 	    });
     </script>
+    <script id="dsq-count-scr" src="//bullrun.disqus.com/count.js" async></script>
 </body>
 </html>

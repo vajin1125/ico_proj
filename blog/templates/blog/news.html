@@ -42,7 +42,7 @@
 	<!-- contents -->
 	<div class="row">
 		<div class="col-2"></div>
-		<div class="col-8" style="text-align:justify;margin-top:30px;">			
+		<div class="col-8" style="text-align:justify;margin-top:30px;">
 			{{ news.content |safe }}
 		</div>
 		<div class="col-2"></div>
@@ -64,6 +64,40 @@
 		</div>
 		<div class="col-2"></div>
 	</div>
+
+	<div class="row author">
+		<div class="col-2"></div>
+		<div class="col-4"></div>
+		<div class="col-4">
+			<div style="float:right">
+				<div class="author-img">
+					<img class="img-fluid rounded-circle" src="{% static news.author_image %}" alt="auther photo">
+				</div>
+				<span>By </span><span style="font-weight:700"> {{news.author_name}}</span>
+			</div>
+		</div>
+		<div class="col-2"></div>
+	</div>
+
+	<div class="row" style="margin-top:30px;">
+		<div class="col-2"></div>
+		<div class="col-4">
+			{% if id > 0 %}
+				<a href = "{% url 'blog:home' id|add:'-1' %}">
+					<button class="btn btn-default"><i class="fas fa-angle-left"></i> Prev</button>
+				</a>
+			{%endif%}
+		</div>
+		<div class="col-4">
+			{% if id < size%}
+			<a href = "{% url 'blog:home' id|add:'1' %}">
+				<button class="btn btn-default" style="float:right">Next <i class="fas fa-angle-right"></i></button>
+			</a>
+			{% endif %}
+		</div>
+		<div class="col-2"></div>
+	</div>
+
 	<div style="text-align:center; margin-top:60px;">
 		<div>
 			<h4>Share our news</h4>
@@ -76,20 +110,36 @@
 				<!-- <li style="display:inline-block; margin:auto 50px;"><a href="facebook" style="color:black;"><i class="fab fa-facebook"></i><span>   BullRunICO</span></a></li> -->
 			</ul>
 		</div>
-		<div>
-			<img class="img-fluid" src="{% static news.author_image %}" alt="blog photo">
-			{{news.author_name}}
-		</div>
-		<!-- <div style="margin-top:30px;">
-			<H6>Email: support@bullrunico.com</H6>
-		</div> -->
 	</div>
-</div>
+	<!-- ==============================disqus====================================== -->
+	<div id="disqus_thread"></div>
+
+	<script>
+		/**
+		*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+		*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+		var disqus_config = function () {
+		this.page.url = 'http://www.bullrunico.com/blog/';  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = 'bullrunico'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+
+		(function() {
+			// DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = 'https://bullrun.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	</div>
 
 {% endblock %}
 
 
-<!-- 
+<!--
 <h1> Title : {{news.title}}</h1>
 {% if news.photo %}
 	<h1> Photo : {{news.photo}}</h1>

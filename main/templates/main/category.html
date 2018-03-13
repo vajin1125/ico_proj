@@ -168,7 +168,7 @@
 				<th>RECEIVED</th>
 				<th>GOAL</th>
 				<th>END DATE</th>
-				<th>TICKET</th>
+				<th>TICKER</th>
 			</thead>
 			<tbody>
 				{% for ico in icos %}
@@ -184,7 +184,7 @@
 					<td class="table-td">${{ ico.total_tokens }}</td>
 					<td class="table-td">{{ ico.date_info }}</td>
 					<!-- market : {{ico.market}} -->
-					<td class="table-td">{{ ico.market }}</td>
+					<td class="table-td">{{ ico.ticker }}</td>
 				</tr>
 				{% endfor %}
 			</tbody>

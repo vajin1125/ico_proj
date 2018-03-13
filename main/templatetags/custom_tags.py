@@ -22,7 +22,9 @@ def get_btc_eth_info():
 	eth_info = {'price':float(data['price_usd']),'change':float(data['percent_change_24h'])}
 	print(eth_info)
 	return {'bitcoin_info':bitcoin_info,'eth_info':eth_info}
+
 @register.inclusion_tag('main/head_ads.html', name = "ads")
+
 def header_ad():
 	ads = Advertise.objects.all()[0]
 	return {'ads':ads}

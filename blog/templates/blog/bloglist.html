@@ -12,7 +12,7 @@
 
   <div class="row">
     {% for item in news %}
-    <a href="{% url 'blog:home' item.title|slice:':10' 0 %}">
+    <a href="{% url 'blog:home' item.title|slugify|slice:':10' 0 %}">
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="blog-card">
           <div class="blog-image">

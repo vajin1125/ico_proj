@@ -7,4 +7,4 @@ def index(request,id = 0):
 	id = int(id)
 	if(news):
 		news = news[id]
-	return render(request,'blog/news.html',{'news':news,'id':id,'size':size-1})
+	return render(request,'blog/bloglist.html',{'news':news,'id':id,'size':size-1})

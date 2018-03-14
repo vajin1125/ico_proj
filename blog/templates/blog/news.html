@@ -38,7 +38,7 @@
 	<!-- contents -->
 	<div class="row">
 		<div class="col-2"></div>
-		<div class="col-8" style="text-align:justify;margin-top:30px;">			
+		<div class="col-8" style="text-align:justify;margin-top:30px;">
 			{{ news.content |safe }}
 		</div>
 		<div class="col-2"></div>
@@ -82,7 +82,7 @@
 				<a href = "{% url 'blog:home' id|add:'-1' %}">
 					<button class="btn btn-default"><i class="fas fa-angle-left"></i> Prev</button>
 				</a>
-			{%endif%}				
+			{%endif%}
 		</div>
 		<div class="col-4">
 			{% if id < size%}
@@ -114,13 +114,13 @@
 		/**
 		*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 		*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-		
+
 		var disqus_config = function () {
 		this.page.url = 'http://www.bullrunico.com/blog/';  // Replace PAGE_URL with your page's canonical URL variable
 		this.page.identifier = 'bullrunico'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 		};
-	
-		(function() { 
+
+		(function() {
 			// DON'T EDIT BELOW THIS LINE
 			var d = document, s = d.createElement('script');
 			s.src = 'https://bullrun.disqus.com/embed.js';
@@ -135,7 +135,7 @@
 {% endblock %}
 
 
-<!-- 
+<!--
 <h1> Title : {{news.title}}</h1>
 {% if news.photo %}
 	<h1> Photo : {{news.photo}}</h1>

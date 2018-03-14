@@ -1,4 +1,8 @@
 {% extends "main/base.html" %}
+{% block seo%}
+<title> {{news.title}} </title>
+<meta name="description" content="{{news.content|striptags|slice:':255'}}">
+{% endblock %}
 {% load static %}
 {% block content %}
 <div style="min-height:450px">
@@ -74,26 +78,6 @@
 		</div>
 		<div class="col-2"></div>
 	</div>
-
-	<!-- <div class="row" style="margin-top:30px;">
-		<div class="col-2"></div>
-		<div class="col-4">
-			{% if id > 0 %}
-				<a href = "{% url 'blog:home' id|add:'-1' %}">
-					<button class="btn btn-default"><i class="fas fa-angle-left"></i> Prev</button>
-				</a>
-			{%endif%}
-		</div>
-		<div class="col-4">
-			{% if id < size%}
-			<a href = "{% url 'blog:home' id|add:'1' %}">
-				<button class="btn btn-default" style="float:right">Next <i class="fas fa-angle-right"></i></button>
-			</a>
-			{% endif %}
-		</div>
-		<div class="col-2"></div>
-	</div> -->
-
 	<div style="text-align:center; margin-top:60px;">
 		<div>
 			<h4>Share our news</h4>

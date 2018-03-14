@@ -542,6 +542,8 @@ table tbody .table-td {
 }
 
 .blog-image img {
+    width: 350px;
+    max-height: 233px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
